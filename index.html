@@ -262,8 +262,8 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/24/利用hexo + github page搭建个人博客/利用hexo + github page搭建个人博客/">
+  <article class="post post-type-测试 " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/24/利用hexo + github page搭建个人博客/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="little lily">
@@ -282,7 +282,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/07/24/利用hexo + github page搭建个人博客/利用hexo + github page搭建个人博客/" itemprop="url">未命名</a></h1>
+                <a class="post-title-link" href="/2017/07/24/利用hexo + github page搭建个人博客/" itemprop="url">利用hexo + github 搭建个人博客</a></h1>
         
 
         <div class="post-meta">
@@ -294,7 +294,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-24T00:15:36+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-24T20:59:27+08:00">
                 2017-07-24
               </time>
             
@@ -313,9 +313,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/07/24/利用hexo + github page搭建个人博客/利用hexo + github page搭建个人博客/#comments" itemprop="discussionUrl">
+                <a href="/2017/07/24/利用hexo + github page搭建个人博客/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/07/24/利用hexo + github page搭建个人博客/利用hexo + github page搭建个人博客/" itemprop="commentCount"></span>
+                        data-disqus-identifier="2017/07/24/利用hexo + github page搭建个人博客/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -342,8 +342,7 @@
       
         
           
-            <p>#利用hexo + github page搭建个人博客</p>
-<h3 id="1-简介"><a href="#1-简介" class="headerlink" title="1. 简介"></a>1. 简介</h3><ul>
+            <h3 id="1-简介"><a href="#1-简介" class="headerlink" title="1. 简介"></a>1. 简介</h3><ul>
 <li>Hexo框架，是快速、简单且功能强大的 Node.js 博客框架，支持Makedown语法，有很多简约美观的主题可选，可以快速在几分钟内生成静态页面，同时可以结合Github Pages，将博客部署到Github Pages上。</li>
 <li>相关网站：<ul>
 <li>hexo: <a href="https://hexo.io/zh-cn/docs/index.html" target="_blank" rel="external">https://hexo.io/zh-cn/docs/index.html</a></li>
@@ -357,16 +356,16 @@
 <li>后记</li>
 </ol>
 <h4 id="2-1-环境配置"><a href="#2-1-环境配置" class="headerlink" title="2.1 环境配置"></a>2.1 环境配置</h4><p>本地安装git和nodejs<br><a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="external">git教程</a><br><a href="ttp://www.runoob.com/nodejs/nodejs-install-setup.html" target="_blank" rel="external">nodejs安装</a></p>
-<h4 id="2-1-2-本地安装hexo并配置"><a href="#2-1-2-本地安装hexo并配置" class="headerlink" title="2.1.2 本地安装hexo并配置"></a>2.1.2 本地安装hexo并配置</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line">// 全局安装hexo</div><div class="line">npm install -g hexo-cli</div><div class="line"></div><div class="line">// 创建站点</div><div class="line">cd myfolder  // 到任意自己喜欢的目录下</div><div class="line">hexo init my-blogs // 结果显示的最后: INFO  Start blogging with Hexo!</div><div class="line"></div><div class="line">// 到站点下</div><div class="line">cd my-blogs/  （ls看文件结构）</div><div class="line">.</div><div class="line">├── _config.yml  // 网站的配置信息</div><div class="line">├── db.json</div><div class="line">├── node_modules // 应用程序依赖文件</div><div class="line">├── package.json // 应用程序的信息</div><div class="line">├── public</div><div class="line">├── scaffolds // 模板文件夹。当您新建文章时，Hexo 会根据 scaffold 来建立文件</div><div class="line">├── source	// 资源文件夹是存放用户资源的地方</div><div class="line">└── themes // 主题文件夹。Hexo 会根据主题来生成静态页面。安装默认的是landscape主题；</div><div class="line">	</div><div class="line">// 可以尝试新建博文</div><div class="line">hexo new &apos;new blog&apos; </div><div class="line">// 执行后，可以在myblog/source/_post目录下看到了“new blog.md“的新博客文章，可以使用支持makedown语法编辑</div><div class="line"></div><div class="line">// 生成静态文件</div><div class="line">hexo generate(或 hexo g)</div><div class="line">// 站点目录下多了一个“public”的文件夹</div><div class="line"></div><div class="line">启动服务器</div><div class="line">hexo server (或 hexo s)</div></pre></td></tr></table></figure>
+<h4 id="2-1-2-本地安装hexo并配置"><a href="#2-1-2-本地安装hexo并配置" class="headerlink" title="2.1.2 本地安装hexo并配置"></a>2.1.2 本地安装hexo并配置</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line">// 全局安装hexo</div><div class="line">npm install -g hexo-cli</div><div class="line"></div><div class="line">// 创建站点</div><div class="line">cd myfolder  // 到任意自己喜欢的目录下</div><div class="line">hexo init my-blogs // 结果显示的最后: INFO  Start blogging with Hexo!</div><div class="line"></div><div class="line">// 到站点下</div><div class="line">cd my-blogs/  （ls看文件结构）</div><div class="line">.</div><div class="line">├── _config.yml  // 网站的配置信息</div><div class="line">├── db.json</div><div class="line">├── node_modules // 应用程序依赖文件</div><div class="line">├── package.json // 应用程序的信息</div><div class="line">├── public</div><div class="line">├── scaffolds // 模板文件夹。当您新建文章时，Hexo 会根据 scaffold 来建立文件</div><div class="line">├── source	// 资源文件夹是存放用户资源的地方</div><div class="line">└── themes // 主题文件夹。Hexo 会根据主题来生成静态页面。安装默认的是landscape主题；</div><div class="line"></div><div class="line">// 可以尝试新建博文</div><div class="line">hexo new &apos;new blog&apos;</div><div class="line">// 执行后，可以在myblog/source/_post目录下看到了“new blog.md“的新博客文章，可以使用支持makedown语法编辑</div><div class="line"></div><div class="line">// 生成静态文件</div><div class="line">hexo generate(或 hexo g)</div><div class="line">// 站点目录下多了一个“public”的文件夹</div><div class="line"></div><div class="line">启动服务器</div><div class="line">hexo server (或 hexo s)</div></pre></td></tr></table></figure>
 <p>此时，在浏览器输入http:localhost:4000/,可看到个人博客，因为hexo开启了本地服务器；</p>
-<h4 id="2-2-github建立GitHub-io的库"><a href="#2-2-github建立GitHub-io的库" class="headerlink" title="2.2 github建立GitHub.io的库"></a>2.2 github建立GitHub.io的库</h4><p>建立新库, 新库的名字:  ${github用户名}.github.io,如，我的是aline2013.github.io<br><img src="./1499585053208.png" alt="Alt text"><br>2.2.3 部署博客到github Page<br>用hexo deploy进行部署(也有其他方法，如git push)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">// 在站点目录下，安装hexo-deployer-git</div><div class="line">cd myblogs</div><div class="line">npm install hexo-deployer-git -save</div><div class="line"></div><div class="line">// 用编辑器打开目录下的配置文件，_config.yml</div><div class="line">// 最后一行： </div><div class="line">ploxy:</div><div class="line"></div><div class="line">// 添加内容后为</div><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repo: https://github.com/aline2013/aline2013.github.io.git</div><div class="line">  branch: master</div><div class="line"> </div><div class="line"> // 其中，repo:是这个库的git的远程地址，还有， 一定要注意键值对冒号之后要有一个空格，否则hexo部署不成功</div></pre></td></tr></table></figure></p>
-<p><img src="./1499585714509.png" alt="Alt text"></p>
+<h4 id="2-2-github建立GitHub-io的库"><a href="#2-2-github建立GitHub-io的库" class="headerlink" title="2.2 github建立GitHub.io的库"></a>2.2 github建立GitHub.io的库</h4><p>建立新库, 新库的名字:  ${github用户名}.github.io,如，我的是aline2013.github.io<br><img src="/2017/07/24/利用hexo%20+%20github%20page搭建个人博客/1499585053208.png" alt="1499585053208.png" title=""><br>2.2.3 部署博客到github Page<br>用hexo deploy进行部署(也有其他方法，如git push)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">// 在站点目录下，安装hexo-deployer-git</div><div class="line">cd myblogs</div><div class="line">npm install hexo-deployer-git -save</div><div class="line"></div><div class="line">// 用编辑器打开目录下的配置文件，_config.yml</div><div class="line">// 最后一行：</div><div class="line">ploxy:</div><div class="line"></div><div class="line">// 添加内容后为</div><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repo: https://github.com/aline2013/aline2013.github.io.git</div><div class="line">  branch: master</div><div class="line"></div><div class="line"> // 其中，repo:是这个库的git的远程地址，还有， 一定要注意键值对冒号之后要有一个空格，否则hexo部署不成功</div></pre></td></tr></table></figure></p>
+<img src="/2017/07/24/利用hexo%20+%20github%20page搭建个人博客/1499585714509.png" alt="1499585714509.png" title="">
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">// 执行部署</div><div class="line">hexo deploy</div></pre></td></tr></table></figure>
 <p>部署成功后，可以在浏览器输入<a href="http://${yourname}.github.io，即可看到博客，以后重新部署静态页面只需要先执行hexo" target="_blank" rel="external">http://${yourname}.github.io，即可看到博客，以后重新部署静态页面只需要先执行hexo</a> g，然后hexo deploy即可。<br>但是，这时还不是自己的网站</p>
 <h4 id="2-3-购买域名并解析"><a href="#2-3-购买域名并解析" class="headerlink" title="2.3 购买域名并解析"></a>2.3 购买域名并解析</h4><h5 id="2-3-1-购买域名"><a href="#2-3-1-购买域名" class="headerlink" title="2.3.1 购买域名"></a>2.3.1 购买域名</h5><p>在阿里云购买域名，网站： <a href="https://wanwang.aliyun.com/?spm=5176.3047821.1.3.2a7aha" target="_blank" rel="external">https://wanwang.aliyun.com/?spm=5176.3047821.1.3.2a7aha</a><br>下载自己喜欢的域名，可以是me，比较普遍的是com;</p>
-<h4 id="2-3-2-解析"><a href="#2-3-2-解析" class="headerlink" title="2.3.2 解析"></a>2.3.2 解析</h4><p>登陆阿里云，进入控制台<br><img src="./1499588656088.png" alt="Alt text"><br>左侧栏，点击域名，然后进入解析页面<br><img src="./1499588713248.png" alt="Alt text"><br><img src="./1499588794336.png" alt="Alt text"><br>点击页面页面上的   <strong>进入高级设置</strong><br><img src="./1499589189985.png" alt="Alt text"><br>也可参考官方介绍：<br><a href="https://help.aliyun.com/knowledge_detail/39788.html" target="_blank" rel="external">https://help.aliyun.com/knowledge_detail/39788.html</a></p>
-<p>完成后，到myBlogs/public下，新建CHNAME文件,内容写上自己的域名<br><img src="./1499589473026.png" alt="Alt text"><br>然后，更新上github，执行部署：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo d</div></pre></td></tr></table></figure></p>
-<p>此时如果报错连不上github，将_config.yml中的deploy：repo的路径去掉 ‘.git’ </p>
+<h4 id="2-3-2-解析"><a href="#2-3-2-解析" class="headerlink" title="2.3.2 解析"></a>2.3.2 解析</h4><p>登陆阿里云，进入控制台<br><img src="/2017/07/24/利用hexo%20+%20github%20page搭建个人博客/1499588656088.png" alt="1499588656088.png" title=""><br>左侧栏，点击域名，然后进入解析页面<br><img src="/2017/07/24/利用hexo%20+%20github%20page搭建个人博客/1499588713248.png" alt="1499588713248.png" title=""><br><img src="/2017/07/24/利用hexo%20+%20github%20page搭建个人博客/1499588794336.png" alt="1499588794336.png" title=""><br>点击页面页面上的   <strong>进入高级设置</strong><br><img src="/2017/07/24/利用hexo%20+%20github%20page搭建个人博客/1499589189985.png" alt="1499589189985.png" title=""><br>也可参考官方介绍：<br><a href="https://help.aliyun.com/knowledge_detail/39788.html" target="_blank" rel="external">https://help.aliyun.com/knowledge_detail/39788.html</a></p>
+<p>完成后，到myBlogs/public下，新建CHNAME文件,内容写上自己的域名<br><img src="/2017/07/24/利用hexo%20+%20github%20page搭建个人博客/1499589473026.png" alt="1499589473026.png" title=""><br>然后，更新上github，执行部署：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo d</div></pre></td></tr></table></figure></p>
+<p>此时如果报错连不上github，将_config.yml中的deploy：repo的路径去掉 ‘.git’</p>
 <p>成功的话，进入到你的github仓库中会看到CNAME文件,4:为了防止域名解析出问题，建议将blog下的public下的CNAME文件，复制到blog下的source文件夹里，这样更新public，不会出现CNAME文件丢失的情况</p>
 <p>此时在浏览器输入,自己的域名，就可以看到自己的博客了（比如我的：<a href="http://aline2013.com）。" target="_blank" rel="external">http://aline2013.com）。</a></p>
 <p>2.4 后记<br>如果输入后发现打不开，可以测试域名解析是否生效，方法路径：<a href="https://help.aliyun.com/knowledge_detail/39834.html?spm=5176.7839833.2.1.EMO808" target="_blank" rel="external">https://help.aliyun.com/knowledge_detail/39834.html?spm=5176.7839833.2.1.EMO808</a><br>并修改自己的解析配置即可</p>
