@@ -77,7 +77,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="测试," />
+  <meta name="keywords" content="浏览器兼容," />
 
 
 
@@ -93,17 +93,17 @@
 
 
 
-<meta name="description" content="平时，我们设置透明度，只需要设置css属性opacity来设置元素背景的穿透率 ,参数值范围0.0 - 1.0 (全透明 - 全不透明),  穿透是指穿透设置了opacity属性的对象及其子元素 但是, ie6-ie8并不支持css属性opacity 解决方法如下：  利用ie提供的滤镜功能, 特殊属性：filter设置透明度123456div&amp;#123;	opacity: 0.1;	// 以下为">
-<meta name="keywords" content="测试">
+<meta name="description" content="问题平时，我们设置透明度，只需要设置css属性opacity来设置元素背景的穿透率 ,参数值范围0.0 - 1.0 (全透明 - 全不透明),  穿透是指穿透设置了opacity属性的对象及其子元素 但是, ie6-ie8并不支持css属性opacity！！！ 解决方法 利用ie提供的滤镜功能, 特殊属性：filter设置透明度  123456div&amp;#123;	opacity: 0.1;	//">
+<meta name="keywords" content="浏览器兼容">
 <meta property="og:type" content="article">
 <meta property="og:title" content="IE8兼容opacity透明度">
 <meta property="og:url" content="http://yoursite.com/2017/10/25/IE8兼容opacity/index.html">
 <meta property="og:site_name" content="Lily&#39;s blog">
-<meta property="og:description" content="平时，我们设置透明度，只需要设置css属性opacity来设置元素背景的穿透率 ,参数值范围0.0 - 1.0 (全透明 - 全不透明),  穿透是指穿透设置了opacity属性的对象及其子元素 但是, ie6-ie8并不支持css属性opacity 解决方法如下：  利用ie提供的滤镜功能, 特殊属性：filter设置透明度123456div&amp;#123;	opacity: 0.1;	// 以下为">
-<meta property="og:updated_time" content="2017-10-25T16:10:32.000Z">
+<meta property="og:description" content="问题平时，我们设置透明度，只需要设置css属性opacity来设置元素背景的穿透率 ,参数值范围0.0 - 1.0 (全透明 - 全不透明),  穿透是指穿透设置了opacity属性的对象及其子元素 但是, ie6-ie8并不支持css属性opacity！！！ 解决方法 利用ie提供的滤镜功能, 特殊属性：filter设置透明度  123456div&amp;#123;	opacity: 0.1;	//">
+<meta property="og:updated_time" content="2017-11-02T04:54:49.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="IE8兼容opacity透明度">
-<meta name="twitter:description" content="平时，我们设置透明度，只需要设置css属性opacity来设置元素背景的穿透率 ,参数值范围0.0 - 1.0 (全透明 - 全不透明),  穿透是指穿透设置了opacity属性的对象及其子元素 但是, ie6-ie8并不支持css属性opacity 解决方法如下：  利用ie提供的滤镜功能, 特殊属性：filter设置透明度123456div&amp;#123;	opacity: 0.1;	// 以下为">
+<meta name="twitter:description" content="问题平时，我们设置透明度，只需要设置css属性opacity来设置元素背景的穿透率 ,参数值范围0.0 - 1.0 (全透明 - 全不透明),  穿透是指穿透设置了opacity属性的对象及其子元素 但是, ie6-ie8并不支持css属性opacity！！！ 解决方法 利用ie提供的滤镜功能, 特殊属性：filter设置透明度  123456div&amp;#123;	opacity: 0.1;	//">
 
 
 
@@ -341,13 +341,13 @@
       
 
       
-        <p>平时，我们设置透明度，只需要设置css属性<strong>opacity</strong>来设置元素背景的穿透率 ,参数值范围0.0 - 1.0 (全透明 - 全不透明),  穿透是指穿透<strong>设置了opacity属性的对象及其子元素</strong></p>
-<p>但是, ie6-ie8并不支持css属性opacity 解决方法如下：</p>
-<ul>
-<li>利用ie提供的滤镜功能, 特殊属性：filter设置透明度<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">div&#123;</div><div class="line">	opacity: 0.1;</div><div class="line">	// 以下为兼容ie6-ie8 css样式</div><div class="line">	filter: alpha(opacity=10);</div><div class="line">	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=10);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
+        <h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>平时，我们设置透明度，只需要设置css属性<strong>opacity</strong>来设置元素背景的穿透率 ,参数值范围0.0 - 1.0 (全透明 - 全不透明),  穿透是指穿透<strong>设置了opacity属性的对象及其子元素</strong></p>
+<p>但是, ie6-ie8并不支持css属性opacity！！！</p>
+<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><ul>
+<li>利用ie提供的滤镜功能, 特殊属性：filter设置透明度</li>
 </ul>
-<p><a href="https://msdn.microsoft.com/en-us/library/ms532910(VS.85" target="_blank" rel="external">官方文档</a>.aspx)</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">div&#123;</div><div class="line">	opacity: 0.1;</div><div class="line">	// 以下为兼容ie6-ie8 css样式</div><div class="line">	filter: alpha(opacity=10);</div><div class="line">	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=10);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="官方文档"><a href="#官方文档" class="headerlink" title="官方文档"></a>官方文档</h3><p><a href="https://msdn.microsoft.com/en-us/library/ms532910(VS.85).aspx" target="_blank" rel="external">https://msdn.microsoft.com/en-us/library/ms532910(VS.85).aspx</a></p>
 
       
     </div>
@@ -377,7 +377,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/测试/" rel="tag"># 测试</a>
+            <a href="/tags/浏览器兼容/" rel="tag"># 浏览器兼容</a>
           
         </div>
       
@@ -453,8 +453,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/lily_avatar.jpeg"
@@ -482,7 +491,7 @@
             
             <div class="site-state-item site-state-tags">
               
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">标签</span>
               
             </div>
@@ -518,6 +527,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#问题"><span class="nav-number">1.</span> <span class="nav-text">问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解决方法"><span class="nav-number">2.</span> <span class="nav-text">解决方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#官方文档"><span class="nav-number">2.1.</span> <span class="nav-text">官方文档</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

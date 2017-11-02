@@ -77,7 +77,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="测试," />
+  <meta name="keywords" content="浏览器兼容," />
 
 
 
@@ -93,17 +93,17 @@
 
 
 
-<meta name="description" content="场景 当我们要实现背景是图片平铺整个屏幕的页面时，就能想到运用css属性background-size来设置背景图大小，设置属性值是关键字cover, 这就是缩放背景图片以完全覆盖背景区，刚好满足我们的要求。 12345678910html &amp;#123;background-image: url(xxx.png);// 背景图居中background-position: center;// 要兼容">
-<meta name="keywords" content="测试">
+<meta name="description" content="场景,问题的出现 当我们要实现背景是图片平铺整个屏幕的页面时，就能想到运用css属性background-size来设置背景图大小，设置属性值是关键字cover, 这就是缩放背景图片以完全覆盖背景区，刚好满足我们的要求。 12345678910html &amp;#123;background-image: url(xxx.png);// 背景图居中background-position: center;">
+<meta name="keywords" content="浏览器兼容">
 <meta property="og:type" content="article">
 <meta property="og:title" content="IE8兼容 background-size:cover">
 <meta property="og:url" content="http://yoursite.com/2017/07/25/IE8兼容background-size/index.html">
 <meta property="og:site_name" content="Lily&#39;s blog">
-<meta property="og:description" content="场景 当我们要实现背景是图片平铺整个屏幕的页面时，就能想到运用css属性background-size来设置背景图大小，设置属性值是关键字cover, 这就是缩放背景图片以完全覆盖背景区，刚好满足我们的要求。 12345678910html &amp;#123;background-image: url(xxx.png);// 背景图居中background-position: center;// 要兼容">
-<meta property="og:updated_time" content="2017-10-25T16:09:39.000Z">
+<meta property="og:description" content="场景,问题的出现 当我们要实现背景是图片平铺整个屏幕的页面时，就能想到运用css属性background-size来设置背景图大小，设置属性值是关键字cover, 这就是缩放背景图片以完全覆盖背景区，刚好满足我们的要求。 12345678910html &amp;#123;background-image: url(xxx.png);// 背景图居中background-position: center;">
+<meta property="og:updated_time" content="2017-11-02T04:57:46.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="IE8兼容 background-size:cover">
-<meta name="twitter:description" content="场景 当我们要实现背景是图片平铺整个屏幕的页面时，就能想到运用css属性background-size来设置背景图大小，设置属性值是关键字cover, 这就是缩放背景图片以完全覆盖背景区，刚好满足我们的要求。 12345678910html &amp;#123;background-image: url(xxx.png);// 背景图居中background-position: center;// 要兼容">
+<meta name="twitter:description" content="场景,问题的出现 当我们要实现背景是图片平铺整个屏幕的页面时，就能想到运用css属性background-size来设置背景图大小，设置属性值是关键字cover, 这就是缩放背景图片以完全覆盖背景区，刚好满足我们的要求。 12345678910html &amp;#123;background-image: url(xxx.png);// 背景图居中background-position: center;">
 
 
 
@@ -341,12 +341,12 @@
       
 
       
-        <p><strong>场景</strong><br> 当我们要实现背景是<strong>图片平铺整个屏幕的页面</strong>时，就能想到运用css属性<code>background-size</code>来设置背景图大小，设置属性值是关键字<code>cover</code>, 这就是<strong>缩放背景图片以完全覆盖背景区</strong>，刚好满足我们的要求。</p>
+        <h2 id="场景-问题的出现"><a href="#场景-问题的出现" class="headerlink" title="场景,问题的出现"></a>场景,问题的出现</h2><p> 当我们要实现背景是<strong>图片平铺整个屏幕的页面</strong>时，就能想到运用css属性<code>background-size</code>来设置背景图大小，设置属性值是关键字<code>cover</code>, 这就是<strong>缩放背景图片以完全覆盖背景区</strong>，刚好满足我们的要求。</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">html &#123;</div><div class="line">background-image: url(xxx.png);</div><div class="line">// 背景图居中</div><div class="line">background-position: center;</div><div class="line">// 要兼容各种版本浏览器的话，要有私有前缀</div><div class="line">-webkit-background-size: cover;</div><div class="line">   -moz-background-size: cover;</div><div class="line">     -o-background-size: cover;</div><div class="line">        background-size: cover;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p><strong>但是</strong>， 这里会遇到兼容性问题，ie8及以下不支持background-size属性，假如ui给的图是1920*1080的背景切图，在ie8下，图片按照原图大小显示，会很突兀，那怎么解决呢？</p>
-<p><strong>方法</strong><br>运用IE滤镜，<code>Microsoft.AlphaImageLoader</code></p>
-<p><strong>原理</strong>:<br>运用滤镜，在对象容器边界内，在对象的背景和内容之间显示一张图片。并提供对此图片的剪切和改变尺寸的操作。如果载入的是PNG(Portable Network Graphics)格式，则0%-100%的透明度也被提供。</p>
-<p><code>Microsoft.AlphaImageLoader</code> 提供了3个参数</p>
+<p>  <strong>但是</strong>， 这里会遇到兼容性问题，ie8及以下不支持background-size属性，假如ui给的图是1920*1080的背景切图，在ie8下，图片按照原图大小显示，会很突兀，那怎么解决呢？</p>
+<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p>运用IE滤镜，<code>Microsoft.AlphaImageLoader</code></p>
+<h3 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h3><p>运用滤镜，在对象容器边界内，在对象的背景和内容之间显示一张图片。并提供对此图片的剪切和改变尺寸的操作。如果载入的是PNG(Portable Network Graphics)格式，则0%-100%的透明度也被提供。</p>
+<h3 id="参数说明"><a href="#参数说明" class="headerlink" title="参数说明"></a>参数说明</h3><p><code>Microsoft.AlphaImageLoader</code> 提供了3个参数</p>
 <ul>
 <li>enabled:  置滤镜是否激活, 默认true</li>
 <li>src:  设置图片地址为中间显示图，<strong>! 该地址是相对显示的html的路径，而不是相对于css文件本身</strong></li>
@@ -358,11 +358,10 @@
 </li>
 </ul>
 <p>很明显，我们需要指定image,选用scale的缩放适应的方式兼容。</p>
-<p><strong>代码示例</strong><br>首先，我把背景图改为设置在body上，因为不支持<code>&lt;html&gt;</code>标签<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">body &#123;</div><div class="line">heiht: 100%;</div><div class="line">width: 100%;</div><div class="line">background-image: @bgPC;</div><div class="line">background-attachment: fixed;</div><div class="line">background-position: center;</div><div class="line">// 兼容IE8设置</div><div class="line">filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/css/img/bg_pc.png', sizingMethod='scale');</div><div class="line">-ms-filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/css/img/bg_pc.png', sizingMethod='scale');</div><div class="line"> background-position: center;</div><div class="line"> background-repeat: no-repeat;</div><div class="line"> -webkit-background-size: cover;</div><div class="line">    -moz-background-size: cover;</div><div class="line">      -o-background-size: cover;</div><div class="line">         background-size: cover;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p><strong>注意</strong>：</p>
-<pre><code>1. 该方法不适合用在`&lt;html&gt;`标签，可以在`body,div..`等，官方文档有列举，可点击参考链接查看
-    2. 可能造成该容器区域内的链接和按钮无效，可设置链接或按钮`position:relative`使其相对浮动, 如果加载滤镜的区域的父层是`position:absolute`时，可使用浮动办法处理。
-</code></pre><p><strong>参考链接</strong><br><a href="https://msdn.microsoft.com/en-us/library/ms532920(v=vs.85" target="_blank" rel="external">官方文档</a>.aspx)</p>
+<h3 id="代码示例"><a href="#代码示例" class="headerlink" title="代码示例"></a>代码示例</h3><p>首先，我把背景图改为设置在body上，因为不支持<code>&lt;html&gt;</code>标签<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">body &#123;</div><div class="line">heiht: 100%;</div><div class="line">width: 100%;</div><div class="line">background-image: @bgPC;</div><div class="line">background-attachment: fixed;</div><div class="line">background-position: center;</div><div class="line">// 兼容IE8设置</div><div class="line">filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/css/img/bg_pc.png', sizingMethod='scale');</div><div class="line">-ms-filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/css/img/bg_pc.png', sizingMethod='scale');</div><div class="line"> background-position: center;</div><div class="line"> background-repeat: no-repeat;</div><div class="line"> -webkit-background-size: cover;</div><div class="line">    -moz-background-size: cover;</div><div class="line">      -o-background-size: cover;</div><div class="line">         background-size: cover;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><pre><code>1. 该方法不适合用在`&lt;html&gt;`标签，可以在`body,div..`等，官方文档有列举，可点击参考链接查看
+2. 可能造成该容器区域内的链接和按钮无效，可设置链接或按钮`position:relative`使其相对浮动, 如果加载滤镜的区域的父层是`position:absolute`时，可使用浮动办法处理。
+</code></pre><h2 id="官方文档"><a href="#官方文档" class="headerlink" title="官方文档"></a>官方文档</h2><p><a href="https://msdn.microsoft.com/en-us/library/ms532920(v=vs.85).aspx" target="_blank" rel="external">https://msdn.microsoft.com/en-us/library/ms532920(v=vs.85).aspx</a></p>
 
       
     </div>
@@ -392,7 +391,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/测试/" rel="tag"># 测试</a>
+            <a href="/tags/浏览器兼容/" rel="tag"># 浏览器兼容</a>
           
         </div>
       
@@ -472,8 +471,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/lily_avatar.jpeg"
@@ -501,7 +509,7 @@
             
             <div class="site-state-item site-state-tags">
               
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">标签</span>
               
             </div>
@@ -537,6 +545,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#场景-问题的出现"><span class="nav-number">1.</span> <span class="nav-text">场景,问题的出现</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解决方法"><span class="nav-number">2.</span> <span class="nav-text">解决方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#原理"><span class="nav-number">2.1.</span> <span class="nav-text">原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参数说明"><span class="nav-number">2.2.</span> <span class="nav-text">参数说明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码示例"><span class="nav-number">2.3.</span> <span class="nav-text">代码示例</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#注意"><span class="nav-number">2.4.</span> <span class="nav-text">注意</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#官方文档"><span class="nav-number">3.</span> <span class="nav-text">官方文档</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
