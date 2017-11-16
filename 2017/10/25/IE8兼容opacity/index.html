@@ -100,6 +100,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/10/25/IE8兼容opacity/index.html">
 <meta property="og:site_name" content="Lily&#39;s blog">
 <meta property="og:description" content="问题平时，我们设置透明度，只需要设置css属性opacity来设置元素背景的穿透率 ,参数值范围0.0 - 1.0 (全透明 - 全不透明),  穿透是指穿透设置了opacity属性的对象及其子元素 但是, ie6-ie8并不支持css属性opacity！！！ 解决方法 利用ie提供的滤镜功能, 特殊属性：filter设置透明度  123456div&amp;#123;	opacity: 0.1;	//">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2017-11-02T04:54:49.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="IE8兼容opacity透明度">
@@ -346,7 +347,7 @@
 <h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><ul>
 <li>利用ie提供的滤镜功能, 特殊属性：filter设置透明度</li>
 </ul>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">div&#123;</div><div class="line">	opacity: 0.1;</div><div class="line">	// 以下为兼容ie6-ie8 css样式</div><div class="line">	filter: alpha(opacity=10);</div><div class="line">	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=10);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">div</span>&#123;</div><div class="line">	<span class="attribute">opacity</span>: <span class="number">0.1</span>;</div><div class="line">	// 以下为兼容ie6-ie8 css样式</div><div class="line">	filter: alpha(opacity=10);</div><div class="line">	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=10);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h3 id="官方文档"><a href="#官方文档" class="headerlink" title="官方文档"></a>官方文档</h3><p><a href="https://msdn.microsoft.com/en-us/library/ms532910(VS.85).aspx" target="_blank" rel="external">https://msdn.microsoft.com/en-us/library/ms532910(VS.85).aspx</a></p>
 
       
@@ -399,6 +400,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/11/16/录制短视频/" rel="prev" title="mac 录制短视频并只做git图">
+                mac 录制短视频并只做git图 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -478,7 +483,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-count">10</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -490,10 +495,10 @@
             
             
             <div class="site-state-item site-state-tags">
-              
-                <span class="site-state-item-count">4</span>
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">标签</span>
-              
+              </a>
             </div>
           
 
@@ -510,6 +515,24 @@
                     <i class="fa fa-fw fa-github"></i>
                   
                   GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://blog.csdn.net/aline2013" target="_blank" title="CSDN">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  CSDN
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://aline2013.com" target="_blank" title="Blogs">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  Blogs
                 </a>
               </span>
             
@@ -614,6 +637,8 @@
   
 
 
+  
+
 
 
 
@@ -641,6 +666,9 @@
 
   
   <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
 
 
   
