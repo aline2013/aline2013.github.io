@@ -93,18 +93,18 @@
 
 
 
-<meta name="description" content="场景,问题的出现 当我们要实现背景是图片平铺整个屏幕的页面时，就能想到运用css属性background-size来设置背景图大小，设置属性值是关键字cover, 这就是缩放背景图片以完全覆盖背景区，刚好满足我们的要求。 12345678910html &amp;#123;background-image: url(xxx.png);// 背景图居中background-position: center;">
+<meta name="description" content="场景,问题的出现 当我们要实现背景是图片平铺整个屏幕的页面时，就能想到运用css属性background-size来设置背景图大小，设置属性值是关键字cover, 这就是缩放背景图片以完全覆盖背景区，刚好满足我们的要求。">
 <meta name="keywords" content="CSS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="IE8兼容 background-size:cover">
 <meta property="og:url" content="http://yoursite.com/2017/07/25/IE8兼容background-size/index.html">
 <meta property="og:site_name" content="Lily&#39;s blog">
-<meta property="og:description" content="场景,问题的出现 当我们要实现背景是图片平铺整个屏幕的页面时，就能想到运用css属性background-size来设置背景图大小，设置属性值是关键字cover, 这就是缩放背景图片以完全覆盖背景区，刚好满足我们的要求。 12345678910html &amp;#123;background-image: url(xxx.png);// 背景图居中background-position: center;">
+<meta property="og:description" content="场景,问题的出现 当我们要实现背景是图片平铺整个屏幕的页面时，就能想到运用css属性background-size来设置背景图大小，设置属性值是关键字cover, 这就是缩放背景图片以完全覆盖背景区，刚好满足我们的要求。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-09T18:54:36.105Z">
+<meta property="og:updated_time" content="2018-07-18T14:31:16.681Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="IE8兼容 background-size:cover">
-<meta name="twitter:description" content="场景,问题的出现 当我们要实现背景是图片平铺整个屏幕的页面时，就能想到运用css属性background-size来设置背景图大小，设置属性值是关键字cover, 这就是缩放背景图片以完全覆盖背景区，刚好满足我们的要求。 12345678910html &amp;#123;background-image: url(xxx.png);// 背景图居中background-position: center;">
+<meta name="twitter:description" content="场景,问题的出现 当我们要实现背景是图片平铺整个屏幕的页面时，就能想到运用css属性background-size来设置背景图大小，设置属性值是关键字cover, 这就是缩放背景图片以完全覆盖背景区，刚好满足我们的要求。">
 
 
 
@@ -179,7 +179,7 @@
       </a>
     </div>
       
-        <p class="site-subtitle"></p>
+        <p class="site-subtitle">摸索中的产品新人</p>
       
   </div>
 
@@ -298,6 +298,7 @@
         
 
         <div class="post-meta">
+          
           <span class="post-time">
             
               <span class="post-meta-item-icon">
@@ -374,7 +375,7 @@
       
 
       
-        <h2 id="场景-问题的出现"><a href="#场景-问题的出现" class="headerlink" title="场景,问题的出现"></a>场景,问题的出现</h2><p> 当我们要实现背景是<strong>图片平铺整个屏幕的页面</strong>时，就能想到运用css属性<code>background-size</code>来设置背景图大小，设置属性值是关键字<code>cover</code>, 这就是<strong>缩放背景图片以完全覆盖背景区</strong>，刚好满足我们的要求。</p>
+        <h2 id="场景-问题的出现"><a href="#场景-问题的出现" class="headerlink" title="场景,问题的出现"></a>场景,问题的出现</h2><p> 当我们要实现背景是<strong>图片平铺整个屏幕的页面</strong>时，就能想到运用css属性<code>background-size</code>来设置背景图大小，设置属性值是关键字<code>cover</code>, 这就是<strong>缩放背景图片以完全覆盖背景区</strong>，刚好满足我们的要求。<br> <a id="more"></a></p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">html</span> &#123;</div><div class="line"><span class="attribute">background-image</span>: <span class="built_in">url</span>(xxx.png);</div><div class="line">// 背景图居中</div><div class="line"><span class="selector-tag">background-position</span>: <span class="selector-tag">center</span>;</div><div class="line">// 要兼容各种版本浏览器的话，要有私有前缀</div><div class="line"><span class="selector-tag">-webkit-background-size</span>: <span class="selector-tag">cover</span>;</div><div class="line">   <span class="selector-tag">-moz-background-size</span>: <span class="selector-tag">cover</span>;</div><div class="line">     <span class="selector-tag">-o-background-size</span>: <span class="selector-tag">cover</span>;</div><div class="line">        <span class="selector-tag">background-size</span>: <span class="selector-tag">cover</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>  <strong>但是</strong>， 这里会遇到兼容性问题，ie8及以下不支持background-size属性，假如ui给的图是1920*1080的背景切图，在ie8下，图片按照原图大小显示，会很突兀，那怎么解决呢？</p>
 <h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p>运用IE滤镜，<code>Microsoft.AlphaImageLoader</code></p>
@@ -551,7 +552,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-count">16</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
