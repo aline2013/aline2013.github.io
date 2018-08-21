@@ -345,17 +345,6 @@
 
           
             
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/06/15/打赏功能-需求分析/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/06/15/打赏功能-需求分析/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
           
 
           
@@ -377,7 +366,7 @@
       
 
       
-        <h2 id="前记"><a href="#前记" class="headerlink" title="前记"></a>前记</h2><p>昨天，我在人人都是产品经理社区上发表了一篇文章<br><a href="http://www.woshipm.com/u/654926" target="_blank" rel="external">Axure示例：需求文档—阿里钉钉的消息模块</a>，审核通过后，一天内它获得了6k+的阅读量，32个收藏，22个赞和3个订阅，这令我非常激动，也受到极大地鼓舞。<br>但与此同时，我发现我的收益不是0元，查看了一下，竟然有3个人给我打赏了，这令我很惊讶，因为我完全没有打赏的经验，对打赏的需求不是很明白。于是，今天就来分析一下打赏功能的需求。<br><a id="more"></a></p>
+        <h2 id="前记"><a href="#前记" class="headerlink" title="前记"></a>前记</h2><p>昨天，我在人人都是产品经理社区上发表了一篇文章<br><a href="http://www.woshipm.com/u/654926" target="_blank" rel="noopener">Axure示例：需求文档—阿里钉钉的消息模块</a>，审核通过后，一天内它获得了6k+的阅读量，32个收藏，22个赞和3个订阅，这令我非常激动，也受到极大地鼓舞。<br>但与此同时，我发现我的收益不是0元，查看了一下，竟然有3个人给我打赏了，这令我很惊讶，因为我完全没有打赏的经验，对打赏的需求不是很明白。于是，今天就来分析一下打赏功能的需求。<br><a id="more"></a></p>
 <h2 id="思维脑图分析"><a href="#思维脑图分析" class="headerlink" title="思维脑图分析"></a>思维脑图分析</h2><img src="/2018/06/15/打赏功能-需求分析/money.png">
 
       
@@ -459,13 +448,9 @@
           
   <div class="comments" id="comments">
     
-      <div id="disqus_thread">
-        <noscript>
-          Please enable JavaScript to view the
-          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-        </noscript>
-      </div>
-    
+    <div class="comments" id="comments">
+    </div>
+  
   </div>
 
 
@@ -735,23 +720,12 @@
 
   
 
-    
-      <script id="dsq-count-scr" src="https://aline2013.disqus.com/count.js" async></script>
-    
 
-    
-      <script type="text/javascript">
-        var disqus_config = function () {
-          this.page.url = 'http://yoursite.com/2018/06/15/打赏功能-需求分析/';
-          this.page.identifier = '2018/06/15/打赏功能-需求分析/';
-          this.page.title = '打赏功能-需求分析';
-        };
-        var d = document, s = d.createElement('script');
-        s.src = 'https://aline2013.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', '' + +new Date());
-        (d.head || d.body).appendChild(s);
-      </script>
-    
+
+
+
+
+
 
   
 
@@ -759,10 +733,24 @@
 
 
 
-
-
-
-
+  
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="/js/src/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        av: AV, 
+        el: '#comments' ,
+        appId: 'wSCLoc1hRCvnibtSzk6dylH6-gzGzoHsz,',
+        appKey: 'IPX2QEVPTBhgHcgIcEwI84fk,',
+        placeholder: 'ヾﾉ≧∀≦)o来啊，快活啊!',
+    });
+  </script>
 
 
   

@@ -345,17 +345,6 @@
 
           
             
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/07/25/博客优化问题/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/07/25/博客优化问题/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
           
 
           
@@ -377,9 +366,9 @@
       
 
       
-        <h3 id="文章图片显示加载问题"><a href="#文章图片显示加载问题" class="headerlink" title="文章图片显示加载问题"></a>文章图片显示加载问题</h3><p>当markdown中，显示示例图片是个很常用的编辑操作，但是，我发现hexo g，不能把图片也生成到/public中，这个问题在hexo官网中有解决方法，<a href="https://hexo.io/zh-cn/docs/asset-folders.html" target="_blank" rel="external">资源文件夹</a>, 用里面的语法，在首页中显示的图片也能显示出来</p>
+        <h3 id="文章图片显示加载问题"><a href="#文章图片显示加载问题" class="headerlink" title="文章图片显示加载问题"></a>文章图片显示加载问题</h3><p>当markdown中，显示示例图片是个很常用的编辑操作，但是，我发现hexo g，不能把图片也生成到/public中，这个问题在hexo官网中有解决方法，<a href="https://hexo.io/zh-cn/docs/asset-folders.html" target="_blank" rel="noopener">资源文件夹</a>, 用里面的语法，在首页中显示的图片也能显示出来</p>
 <h2 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h2><p>比如，我的/source下文件结构，<br><img src="/2017/07/25/博客优化问题/1500985864269.png"><br>在我的 “利用hexo+github page搭建博客.md” 中引用图片方法为</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;% asset_img 1499585714509.png %&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% asset_img 1499585714509.png %&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -421,8 +410,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/07/25/IE8兼容background-size/" rel="next" title="IE8兼容 background-size:cover">
-                <i class="fa fa-chevron-left"></i> IE8兼容 background-size:cover
+              <a href="/2017/07/25/disqus/" rel="next" title="配置博客主题next+评论系统disqus">
+                <i class="fa fa-chevron-left"></i> 配置博客主题next+评论系统disqus
               </a>
             
           </div>
@@ -431,8 +420,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/10/25/检测浏览器是否支持canvas/" rel="prev" title="检测浏览器是否支持 canvas">
-                检测浏览器是否支持 canvas <i class="fa fa-chevron-right"></i>
+              <a href="/2017/07/25/IE8兼容background-size/" rel="prev" title="IE8兼容 background-size:cover">
+                IE8兼容 background-size:cover <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -459,13 +448,9 @@
           
   <div class="comments" id="comments">
     
-      <div id="disqus_thread">
-        <noscript>
-          Please enable JavaScript to view the
-          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-        </noscript>
-      </div>
-    
+    <div class="comments" id="comments">
+    </div>
+  
   </div>
 
 
@@ -735,23 +720,12 @@
 
   
 
-    
-      <script id="dsq-count-scr" src="https://aline2013.disqus.com/count.js" async></script>
-    
 
-    
-      <script type="text/javascript">
-        var disqus_config = function () {
-          this.page.url = 'http://yoursite.com/2017/07/25/博客优化问题/';
-          this.page.identifier = '2017/07/25/博客优化问题/';
-          this.page.title = '博客优化问题';
-        };
-        var d = document, s = d.createElement('script');
-        s.src = 'https://aline2013.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', '' + +new Date());
-        (d.head || d.body).appendChild(s);
-      </script>
-    
+
+
+
+
+
 
   
 
@@ -759,10 +733,24 @@
 
 
 
-
-
-
-
+  
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="/js/src/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        av: AV, 
+        el: '#comments' ,
+        appId: 'wSCLoc1hRCvnibtSzk6dylH6-gzGzoHsz,',
+        appKey: 'IPX2QEVPTBhgHcgIcEwI84fk,',
+        placeholder: 'ヾﾉ≧∀≦)o来啊，快活啊!',
+    });
+  </script>
 
 
   

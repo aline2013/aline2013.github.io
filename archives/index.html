@@ -591,9 +591,9 @@
 
       <h2 class="post-title">
         
-            <a class="post-title-link" href="/2018/06/01/amp/" itemprop="url">
+            <a class="post-title-link" href="/2018/06/01/pwa/" itemprop="url">
               
-                <span itemprop="name">AMP</span>
+                <span itemprop="name">PWA</span>
               
             </a>
         
@@ -628,9 +628,9 @@
 
       <h2 class="post-title">
         
-            <a class="post-title-link" href="/2018/06/01/pwa/" itemprop="url">
+            <a class="post-title-link" href="/2018/06/01/amp/" itemprop="url">
               
-                <span itemprop="name">PWA</span>
+                <span itemprop="name">AMP</span>
               
             </a>
         
@@ -910,11 +910,12 @@
 
   
 
-    
-      <script id="dsq-count-scr" src="https://aline2013.disqus.com/count.js" async></script>
-    
 
-    
+
+
+
+
+
 
   
 
@@ -922,10 +923,24 @@
 
 
 
-
-
-
-
+  
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="/js/src/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        av: AV, 
+        el: '#comments' ,
+        appId: 'wSCLoc1hRCvnibtSzk6dylH6-gzGzoHsz,',
+        appKey: 'IPX2QEVPTBhgHcgIcEwI84fk,',
+        placeholder: 'ヾﾉ≧∀≦)o来啊，快活啊!',
+    });
+  </script>
 
 
   

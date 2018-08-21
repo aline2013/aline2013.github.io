@@ -346,17 +346,6 @@
 
           
             
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/06/01/pwa/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/06/01/pwa/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
           
 
           
@@ -390,9 +379,9 @@
 <li>Push Notification，Push API 的出现则让推送服务具备了向 web 应用推送消息的能力。</li>
 </ol>
 <h2 id="代码示例"><a href="#代码示例" class="headerlink" title="代码示例"></a>代码示例</h2><h2 id="相关学习资料"><a href="#相关学习资料" class="headerlink" title="相关学习资料"></a>相关学习资料</h2><ol>
-<li>Progressive Web Apps (PWA) 中文版:  <a href="http://sangka-z.com/PWA-Book-CN/" target="_blank" rel="external">http://sangka-z.com/PWA-Book-CN/</a><br><a href="https://lavas.baidu.com/pwa/README" target="_blank" rel="external">https://lavas.baidu.com/pwa/README</a></li>
-<li>基于Vue 的PWA 完整解决方案LAVAS：<a href="https://lavas.baidu.com/pwa/README" target="_blank" rel="external">https://lavas.baidu.com/pwa/README</a></li>
-<li>知乎话题: 渐进式网络应用程序（PWA）<a href="https://www.zhihu.com/topic/20073560/hot" target="_blank" rel="external">https://www.zhihu.com/topic/20073560/hot</a></li>
+<li>Progressive Web Apps (PWA) 中文版:  <a href="http://sangka-z.com/PWA-Book-CN/" target="_blank" rel="noopener">http://sangka-z.com/PWA-Book-CN/</a><br><a href="https://lavas.baidu.com/pwa/README" target="_blank" rel="noopener">https://lavas.baidu.com/pwa/README</a></li>
+<li>基于Vue 的PWA 完整解决方案LAVAS：<a href="https://lavas.baidu.com/pwa/README" target="_blank" rel="noopener">https://lavas.baidu.com/pwa/README</a></li>
+<li>知乎话题: 渐进式网络应用程序（PWA）<a href="https://www.zhihu.com/topic/20073560/hot" target="_blank" rel="noopener">https://www.zhihu.com/topic/20073560/hot</a></li>
 </ol>
 
       
@@ -436,8 +425,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/05/02/数据分析网站相关参数（PV,UV…）/" rel="next" title="数据分析网站相关参数（PV,UV...）">
-                <i class="fa fa-chevron-left"></i> 数据分析网站相关参数（PV,UV...）
+              <a href="/2018/06/01/amp/" rel="next" title="AMP">
+                <i class="fa fa-chevron-left"></i> AMP
               </a>
             
           </div>
@@ -446,8 +435,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/06/01/amp/" rel="prev" title="AMP">
-                AMP <i class="fa fa-chevron-right"></i>
+              <a href="/2018/06/02/todo/" rel="prev" title="todo">
+                todo <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -474,13 +463,9 @@
           
   <div class="comments" id="comments">
     
-      <div id="disqus_thread">
-        <noscript>
-          Please enable JavaScript to view the
-          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-        </noscript>
-      </div>
-    
+    <div class="comments" id="comments">
+    </div>
+  
   </div>
 
 
@@ -750,23 +735,12 @@
 
   
 
-    
-      <script id="dsq-count-scr" src="https://aline2013.disqus.com/count.js" async></script>
-    
 
-    
-      <script type="text/javascript">
-        var disqus_config = function () {
-          this.page.url = 'http://yoursite.com/2018/06/01/pwa/';
-          this.page.identifier = '2018/06/01/pwa/';
-          this.page.title = 'PWA';
-        };
-        var d = document, s = d.createElement('script');
-        s.src = 'https://aline2013.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', '' + +new Date());
-        (d.head || d.body).appendChild(s);
-      </script>
-    
+
+
+
+
+
 
   
 
@@ -774,10 +748,24 @@
 
 
 
-
-
-
-
+  
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="/js/src/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        av: AV, 
+        el: '#comments' ,
+        appId: 'wSCLoc1hRCvnibtSzk6dylH6-gzGzoHsz,',
+        appKey: 'IPX2QEVPTBhgHcgIcEwI84fk,',
+        placeholder: 'ヾﾉ≧∀≦)o来啊，快活啊!',
+    });
+  </script>
 
 
   

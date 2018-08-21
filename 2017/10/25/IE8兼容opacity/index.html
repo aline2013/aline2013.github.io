@@ -343,17 +343,6 @@
 
           
             
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/10/25/IE8兼容opacity/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/10/25/IE8兼容opacity/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
           
 
           
@@ -380,8 +369,8 @@
 <h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><ul>
 <li>利用ie提供的滤镜功能, 特殊属性：filter设置透明度</li>
 </ul>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">div</span>&#123;</div><div class="line">	<span class="attribute">opacity</span>: <span class="number">0.1</span>;</div><div class="line">	// 以下为兼容ie6-ie8 css样式</div><div class="line">	filter: alpha(opacity=10);</div><div class="line">	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=10);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="官方文档"><a href="#官方文档" class="headerlink" title="官方文档"></a>官方文档</h3><p><a href="https://msdn.microsoft.com/en-us/library/ms532910(VS.85).aspx" target="_blank" rel="external">https://msdn.microsoft.com/en-us/library/ms532910(VS.85).aspx</a></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span>&#123;</span><br><span class="line">	<span class="attribute">opacity</span>: <span class="number">0.1</span>;</span><br><span class="line">	// 以下为兼容ie6-ie8 css样式</span><br><span class="line">	filter: alpha(opacity=10);</span><br><span class="line">	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=10);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="官方文档"><a href="#官方文档" class="headerlink" title="官方文档"></a>官方文档</h3><p><a href="https://msdn.microsoft.com/en-us/library/ms532910(VS.85).aspx" target="_blank" rel="noopener">https://msdn.microsoft.com/en-us/library/ms532910(VS.85).aspx</a></p>
 
       
     </div>
@@ -424,8 +413,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/10/25/sequelize中文目录路径/" rel="next" title="IT笔录网站-sequelize中文目录路径">
-                <i class="fa fa-chevron-left"></i> IT笔录网站-sequelize中文目录路径
+              <a href="/2017/10/25/package.json相关说明/" rel="next" title="package.json 相关说明">
+                <i class="fa fa-chevron-left"></i> package.json 相关说明
               </a>
             
           </div>
@@ -462,13 +451,9 @@
           
   <div class="comments" id="comments">
     
-      <div id="disqus_thread">
-        <noscript>
-          Please enable JavaScript to view the
-          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-        </noscript>
-      </div>
-    
+    <div class="comments" id="comments">
+    </div>
+  
   </div>
 
 
@@ -738,23 +723,12 @@
 
   
 
-    
-      <script id="dsq-count-scr" src="https://aline2013.disqus.com/count.js" async></script>
-    
 
-    
-      <script type="text/javascript">
-        var disqus_config = function () {
-          this.page.url = 'http://yoursite.com/2017/10/25/IE8兼容opacity/';
-          this.page.identifier = '2017/10/25/IE8兼容opacity/';
-          this.page.title = 'IE8兼容opacity透明度';
-        };
-        var d = document, s = d.createElement('script');
-        s.src = 'https://aline2013.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', '' + +new Date());
-        (d.head || d.body).appendChild(s);
-      </script>
-    
+
+
+
+
+
 
   
 
@@ -762,10 +736,24 @@
 
 
 
-
-
-
-
+  
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="/js/src/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        av: AV, 
+        el: '#comments' ,
+        appId: 'wSCLoc1hRCvnibtSzk6dylH6-gzGzoHsz,',
+        appKey: 'IPX2QEVPTBhgHcgIcEwI84fk,',
+        placeholder: 'ヾﾉ≧∀≦)o来啊，快活啊!',
+    });
+  </script>
 
 
   

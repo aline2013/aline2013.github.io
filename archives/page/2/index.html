@@ -448,9 +448,9 @@
 
       <h2 class="post-title">
         
-            <a class="post-title-link" href="/2017/10/25/sequelize中文目录路径/" itemprop="url">
+            <a class="post-title-link" href="/2017/10/25/package.json相关说明/" itemprop="url">
               
-                <span itemprop="name">IT笔录网站-sequelize中文目录路径</span>
+                <span itemprop="name">package.json 相关说明</span>
               
             </a>
         
@@ -485,9 +485,9 @@
 
       <h2 class="post-title">
         
-            <a class="post-title-link" href="/2017/10/25/package.json相关说明/" itemprop="url">
+            <a class="post-title-link" href="/2017/10/25/sequelize中文目录路径/" itemprop="url">
               
-                <span itemprop="name">package.json 相关说明</span>
+                <span itemprop="name">IT笔录网站-sequelize中文目录路径</span>
               
             </a>
         
@@ -559,9 +559,9 @@
 
       <h2 class="post-title">
         
-            <a class="post-title-link" href="/2017/07/25/博客优化问题/" itemprop="url">
+            <a class="post-title-link" href="/2017/07/25/IE8兼容background-size/" itemprop="url">
               
-                <span itemprop="name">博客优化问题</span>
+                <span itemprop="name">IE8兼容 background-size:cover</span>
               
             </a>
         
@@ -596,9 +596,9 @@
 
       <h2 class="post-title">
         
-            <a class="post-title-link" href="/2017/07/25/IE8兼容background-size/" itemprop="url">
+            <a class="post-title-link" href="/2017/07/25/博客优化问题/" itemprop="url">
               
-                <span itemprop="name">IE8兼容 background-size:cover</span>
+                <span itemprop="name">博客优化问题</span>
               
             </a>
         
@@ -915,11 +915,12 @@
 
   
 
-    
-      <script id="dsq-count-scr" src="https://aline2013.disqus.com/count.js" async></script>
-    
 
-    
+
+
+
+
+
 
   
 
@@ -927,10 +928,24 @@
 
 
 
-
-
-
-
+  
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="/js/src/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        av: AV, 
+        el: '#comments' ,
+        appId: 'wSCLoc1hRCvnibtSzk6dylH6-gzGzoHsz,',
+        appKey: 'IPX2QEVPTBhgHcgIcEwI84fk,',
+        placeholder: 'ヾﾉ≧∀≦)o来啊，快活啊!',
+    });
+  </script>
 
 
   

@@ -274,7 +274,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/25/package.json相关说明/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/25/IE8兼容opacity/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="little lily">
@@ -293,7 +293,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/10/25/package.json相关说明/" itemprop="url">package.json 相关说明</a></h1>
+                <a class="post-title-link" href="/2017/10/25/IE8兼容opacity/" itemprop="url">IE8兼容opacity透明度</a></h1>
         
 
         <div class="post-meta">
@@ -342,17 +342,6 @@
 
           
             
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/10/25/package.json相关说明/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/10/25/package.json相关说明/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
           
 
           
@@ -375,10 +364,11 @@
 
       
         
-          <h2 id="完整的package-json"><a href="#完整的package-json" class="headerlink" title="完整的package.json"></a>完整的package.json</h2><p>最简单的package.json文件，<strong>项目名称</strong>和<strong>项目版本</strong>不可缺，不要把node或者js放在名字中</p>
+          <h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>平时，我们设置透明度，只需要设置css属性<strong>opacity</strong>来设置元素背景的穿透率 ,参数值范围0.0 - 1.0 (全透明 - 全不透明),  穿透是指穿透<strong>设置了opacity属性的对象及其子元素</strong></p>
+<p>但是, ie6-ie8并不支持css属性opacity！！！<br>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/10/25/package.json相关说明/#more" rel="contents">
+            <a class="btn" href="/2017/10/25/IE8兼容opacity/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -492,17 +482,6 @@
 
           
             
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/10/25/检测浏览器是否支持canvas/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/10/25/检测浏览器是否支持canvas/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
           
 
           
@@ -526,8 +505,8 @@
       
         
           
-            <h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p>通过新建canvas标签， 看是否支持canvas.getContext() 方法即可。<br>方法如下：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> canvas = <span class="built_in">document</span>.getElementById(<span class="string">'tutorial'</span>);</div><div class="line"></div><div class="line"><span class="keyword">if</span> (canvas.getContext)&#123;</div><div class="line"><span class="keyword">var</span> ctx = canvas.getContext(<span class="string">'2d'</span>);</div><div class="line"><span class="comment">// drawing code here</span></div><div class="line">&#125; <span class="keyword">else</span> &#123;</div><div class="line"><span class="comment">// canvas-unsupported code here</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Canvas_API/Tutorial/Basic_usage" target="_blank" rel="external">MDN</a></p>
+            <h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p>通过新建canvas标签， 看是否支持canvas.getContext() 方法即可。<br>方法如下：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> canvas = <span class="built_in">document</span>.getElementById(<span class="string">'tutorial'</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (canvas.getContext)&#123;</span><br><span class="line"><span class="keyword">var</span> ctx = canvas.getContext(<span class="string">'2d'</span>);</span><br><span class="line"><span class="comment">// drawing code here</span></span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line"><span class="comment">// canvas-unsupported code here</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Canvas_API/Tutorial/Basic_usage" target="_blank" rel="noopener">MDN</a></p>
 
           
         
@@ -639,17 +618,6 @@
 
           
             
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/07/25/博客优化问题/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/07/25/博客优化问题/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
           
 
           
@@ -673,9 +641,9 @@
       
         
           
-            <h3 id="文章图片显示加载问题"><a href="#文章图片显示加载问题" class="headerlink" title="文章图片显示加载问题"></a>文章图片显示加载问题</h3><p>当markdown中，显示示例图片是个很常用的编辑操作，但是，我发现hexo g，不能把图片也生成到/public中，这个问题在hexo官网中有解决方法，<a href="https://hexo.io/zh-cn/docs/asset-folders.html" target="_blank" rel="external">资源文件夹</a>, 用里面的语法，在首页中显示的图片也能显示出来</p>
+            <h3 id="文章图片显示加载问题"><a href="#文章图片显示加载问题" class="headerlink" title="文章图片显示加载问题"></a>文章图片显示加载问题</h3><p>当markdown中，显示示例图片是个很常用的编辑操作，但是，我发现hexo g，不能把图片也生成到/public中，这个问题在hexo官网中有解决方法，<a href="https://hexo.io/zh-cn/docs/asset-folders.html" target="_blank" rel="noopener">资源文件夹</a>, 用里面的语法，在首页中显示的图片也能显示出来</p>
 <h2 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h2><p>比如，我的/source下文件结构，<br><img src="/2017/07/25/博客优化问题/1500985864269.png"><br>在我的 “利用hexo+github page搭建博客.md” 中引用图片方法为</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;% asset_img 1499585714509.png %&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% asset_img 1499585714509.png %&#125;</span><br></pre></td></tr></table></figure>
           
         
       
@@ -785,17 +753,6 @@
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/07/25/IE8兼容background-size/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/07/25/IE8兼容background-size/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -936,17 +893,6 @@
 
           
             
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/07/25/disqus/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/07/25/disqus/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
           
 
           
@@ -973,7 +919,7 @@
 <li>这里仅仅介绍一下有哪些主题，具体的设置方式，在官网上讲解得很详细，可直接参考对应官网。</li>
 </ul>
 <ol>
-<li>博客的主题默认是 landscape, 我们可以修改为自己喜欢的主题，我在知乎中找到相关链接，<a href="https://www.zhihu.com/question/24422335" target="_blank" rel="external">有哪些好看的 Hexo 主题？</a></li>
+<li>博客的主题默认是 landscape, 我们可以修改为自己喜欢的主题，我在知乎中找到相关链接，<a href="https://www.zhihu.com/question/24422335" target="_blank" rel="noopener">有哪些好看的 Hexo 主题？</a></li>
 </ol>
           <!--noindex-->
           <div class="post-button text-center">
@@ -1270,11 +1216,12 @@
 
   
 
-    
-      <script id="dsq-count-scr" src="https://aline2013.disqus.com/count.js" async></script>
-    
 
-    
+
+
+
+
+
 
   
 
@@ -1282,10 +1229,24 @@
 
 
 
-
-
-
-
+  
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="/js/src/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        av: AV, 
+        el: '#comments' ,
+        appId: 'wSCLoc1hRCvnibtSzk6dylH6-gzGzoHsz,',
+        appKey: 'IPX2QEVPTBhgHcgIcEwI84fk,',
+        placeholder: 'ヾﾉ≧∀≦)o来啊，快活啊!',
+    });
+  </script>
 
 
   

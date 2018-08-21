@@ -343,17 +343,6 @@
 
           
             
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/11/16/项目demo展示/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/11/16/项目demo展示/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
           
 
           
@@ -375,9 +364,9 @@
       
 
       
-        <h2 id="前记"><a href="#前记" class="headerlink" title="前记"></a>前记</h2><p>经常在github上有人通过扫描二维码或点击链接看demo，于是查找了一下方法，并且已经会使用，比如我的展示链接是： <a href="http://aline2013.com/vue2-demo/show-modal/index.html" target="_blank" rel="external">http://aline2013.com/vue2-demo/show-modal/index.html</a></p>
+        <h2 id="前记"><a href="#前记" class="headerlink" title="前记"></a>前记</h2><p>经常在github上有人通过扫描二维码或点击链接看demo，于是查找了一下方法，并且已经会使用，比如我的展示链接是： <a href="http://aline2013.com/vue2-demo/show-modal/index.html" target="_blank" rel="noopener">http://aline2013.com/vue2-demo/show-modal/index.html</a></p>
 <h2 id="学习链接"><a href="#学习链接" class="headerlink" title="学习链接"></a>学习链接</h2><ol>
-<li><a href="http://www.jianshu.com/p/75e30889e70a" target="_blank" rel="external">Github-README 中展示demo</a><br>这篇博文讲解该方法主要是通过设置<code>github-&gt;setting-&gt;github Pages</code>为<code>master branch</code>来实现的, 设置成功后,有链接返回,该链接只是指向文件夹，需要指定展示文件。</li>
+<li><a href="http://www.jianshu.com/p/75e30889e70a" target="_blank" rel="noopener">Github-README 中展示demo</a><br>这篇博文讲解该方法主要是通过设置<code>github-&gt;setting-&gt;github Pages</code>为<code>master branch</code>来实现的, 设置成功后,有链接返回,该链接只是指向文件夹，需要指定展示文件。</li>
 </ol>
 
       
@@ -459,13 +448,9 @@
           
   <div class="comments" id="comments">
     
-      <div id="disqus_thread">
-        <noscript>
-          Please enable JavaScript to view the
-          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-        </noscript>
-      </div>
-    
+    <div class="comments" id="comments">
+    </div>
+  
   </div>
 
 
@@ -735,23 +720,12 @@
 
   
 
-    
-      <script id="dsq-count-scr" src="https://aline2013.disqus.com/count.js" async></script>
-    
 
-    
-      <script type="text/javascript">
-        var disqus_config = function () {
-          this.page.url = 'http://yoursite.com/2017/11/16/项目demo展示/';
-          this.page.identifier = '2017/11/16/项目demo展示/';
-          this.page.title = 'github项目的demo展示';
-        };
-        var d = document, s = d.createElement('script');
-        s.src = 'https://aline2013.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', '' + +new Date());
-        (d.head || d.body).appendChild(s);
-      </script>
-    
+
+
+
+
+
 
   
 
@@ -759,10 +733,24 @@
 
 
 
-
-
-
-
+  
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="/js/src/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        av: AV, 
+        el: '#comments' ,
+        appId: 'wSCLoc1hRCvnibtSzk6dylH6-gzGzoHsz,',
+        appKey: 'IPX2QEVPTBhgHcgIcEwI84fk,',
+        placeholder: 'ヾﾉ≧∀≦)o来啊，快活啊!',
+    });
+  </script>
 
 
   

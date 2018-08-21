@@ -343,17 +343,6 @@
 
           
             
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/07/25/IE8兼容background-size/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/07/25/IE8兼容background-size/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
           
 
           
@@ -376,7 +365,7 @@
 
       
         <h2 id="场景-问题的出现"><a href="#场景-问题的出现" class="headerlink" title="场景,问题的出现"></a>场景,问题的出现</h2><p> 当我们要实现背景是<strong>图片平铺整个屏幕的页面</strong>时，就能想到运用css属性<code>background-size</code>来设置背景图大小，设置属性值是关键字<code>cover</code>, 这就是<strong>缩放背景图片以完全覆盖背景区</strong>，刚好满足我们的要求。<br> <a id="more"></a></p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">html</span> &#123;</div><div class="line"><span class="attribute">background-image</span>: <span class="built_in">url</span>(xxx.png);</div><div class="line">// 背景图居中</div><div class="line"><span class="selector-tag">background-position</span>: <span class="selector-tag">center</span>;</div><div class="line">// 要兼容各种版本浏览器的话，要有私有前缀</div><div class="line"><span class="selector-tag">-webkit-background-size</span>: <span class="selector-tag">cover</span>;</div><div class="line">   <span class="selector-tag">-moz-background-size</span>: <span class="selector-tag">cover</span>;</div><div class="line">     <span class="selector-tag">-o-background-size</span>: <span class="selector-tag">cover</span>;</div><div class="line">        <span class="selector-tag">background-size</span>: <span class="selector-tag">cover</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">html</span> &#123;</span><br><span class="line"><span class="attribute">background-image</span>: <span class="built_in">url</span>(xxx.png);</span><br><span class="line">// 背景图居中</span><br><span class="line"><span class="selector-tag">background-position</span>: <span class="selector-tag">center</span>;</span><br><span class="line">// 要兼容各种版本浏览器的话，要有私有前缀</span><br><span class="line"><span class="selector-tag">-webkit-background-size</span>: <span class="selector-tag">cover</span>;</span><br><span class="line">   <span class="selector-tag">-moz-background-size</span>: <span class="selector-tag">cover</span>;</span><br><span class="line">     <span class="selector-tag">-o-background-size</span>: <span class="selector-tag">cover</span>;</span><br><span class="line">        <span class="selector-tag">background-size</span>: <span class="selector-tag">cover</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>  <strong>但是</strong>， 这里会遇到兼容性问题，ie8及以下不支持background-size属性，假如ui给的图是1920*1080的背景切图，在ie8下，图片按照原图大小显示，会很突兀，那怎么解决呢？</p>
 <h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p>运用IE滤镜，<code>Microsoft.AlphaImageLoader</code></p>
 <h3 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h3><p>运用滤镜，在对象容器边界内，在对象的背景和内容之间显示一张图片。并提供对此图片的剪切和改变尺寸的操作。如果载入的是PNG(Portable Network Graphics)格式，则0%-100%的透明度也被提供。</p>
@@ -392,10 +381,10 @@
 </li>
 </ul>
 <p>很明显，我们需要指定image,选用scale的缩放适应的方式兼容。</p>
-<h3 id="代码示例"><a href="#代码示例" class="headerlink" title="代码示例"></a>代码示例</h3><p>首先，我把背景图改为设置在body上，因为不支持<code>&lt;html&gt;</code>标签<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">body</span> &#123;</div><div class="line"><span class="attribute">heiht</span>: <span class="number">100%</span>;</div><div class="line"><span class="attribute">width</span>: <span class="number">100%</span>;</div><div class="line"><span class="attribute">background-image</span>: @bgPC;</div><div class="line"><span class="attribute">background-attachment</span>: fixed;</div><div class="line"><span class="attribute">background-position</span>: center;</div><div class="line">// 兼容IE8设置</div><div class="line">filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/css/img/bg_pc.png', sizingMethod='scale');</div><div class="line">-ms-filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/css/img/bg_pc.png', sizingMethod='scale');</div><div class="line"> <span class="selector-tag">background-position</span>: <span class="selector-tag">center</span>;</div><div class="line"> <span class="selector-tag">background-repeat</span>: <span class="selector-tag">no-repeat</span>;</div><div class="line"> <span class="selector-tag">-webkit-background-size</span>: <span class="selector-tag">cover</span>;</div><div class="line">    <span class="selector-tag">-moz-background-size</span>: <span class="selector-tag">cover</span>;</div><div class="line">      <span class="selector-tag">-o-background-size</span>: <span class="selector-tag">cover</span>;</div><div class="line">         <span class="selector-tag">background-size</span>: <span class="selector-tag">cover</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="代码示例"><a href="#代码示例" class="headerlink" title="代码示例"></a>代码示例</h3><p>首先，我把背景图改为设置在body上，因为不支持<code>&lt;html&gt;</code>标签<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line"><span class="attribute">heiht</span>: <span class="number">100%</span>;</span><br><span class="line"><span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line"><span class="attribute">background-image</span>: @bgPC;</span><br><span class="line"><span class="attribute">background-attachment</span>: fixed;</span><br><span class="line"><span class="attribute">background-position</span>: center;</span><br><span class="line">// 兼容IE8设置</span><br><span class="line">filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/css/img/bg_pc.png', sizingMethod='scale');</span><br><span class="line">-ms-filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/css/img/bg_pc.png', sizingMethod='scale');</span><br><span class="line"> <span class="selector-tag">background-position</span>: <span class="selector-tag">center</span>;</span><br><span class="line"> <span class="selector-tag">background-repeat</span>: <span class="selector-tag">no-repeat</span>;</span><br><span class="line"> <span class="selector-tag">-webkit-background-size</span>: <span class="selector-tag">cover</span>;</span><br><span class="line">    <span class="selector-tag">-moz-background-size</span>: <span class="selector-tag">cover</span>;</span><br><span class="line">      <span class="selector-tag">-o-background-size</span>: <span class="selector-tag">cover</span>;</span><br><span class="line">         <span class="selector-tag">background-size</span>: <span class="selector-tag">cover</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><pre><code>1. 该方法不适合用在`&lt;html&gt;`标签，可以在`body,div..`等，官方文档有列举，可点击参考链接查看
 2. 可能造成该容器区域内的链接和按钮无效，可设置链接或按钮`position:relative`使其相对浮动, 如果加载滤镜的区域的父层是`position:absolute`时，可使用浮动办法处理。
-</code></pre><h2 id="官方文档"><a href="#官方文档" class="headerlink" title="官方文档"></a>官方文档</h2><p><a href="https://msdn.microsoft.com/en-us/library/ms532920(v=vs.85).aspx" target="_blank" rel="external">https://msdn.microsoft.com/en-us/library/ms532920(v=vs.85).aspx</a></p>
+</code></pre><h2 id="官方文档"><a href="#官方文档" class="headerlink" title="官方文档"></a>官方文档</h2><p><a href="https://msdn.microsoft.com/en-us/library/ms532920(v=vs.85).aspx" target="_blank" rel="noopener">https://msdn.microsoft.com/en-us/library/ms532920(v=vs.85).aspx</a></p>
 
       
     </div>
@@ -438,8 +427,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/07/25/disqus/" rel="next" title="配置博客主题next+评论系统disqus">
-                <i class="fa fa-chevron-left"></i> 配置博客主题next+评论系统disqus
+              <a href="/2017/07/25/博客优化问题/" rel="next" title="博客优化问题">
+                <i class="fa fa-chevron-left"></i> 博客优化问题
               </a>
             
           </div>
@@ -448,8 +437,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/07/25/博客优化问题/" rel="prev" title="博客优化问题">
-                博客优化问题 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/10/25/检测浏览器是否支持canvas/" rel="prev" title="检测浏览器是否支持 canvas">
+                检测浏览器是否支持 canvas <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -476,13 +465,9 @@
           
   <div class="comments" id="comments">
     
-      <div id="disqus_thread">
-        <noscript>
-          Please enable JavaScript to view the
-          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-        </noscript>
-      </div>
-    
+    <div class="comments" id="comments">
+    </div>
+  
   </div>
 
 
@@ -752,23 +737,12 @@
 
   
 
-    
-      <script id="dsq-count-scr" src="https://aline2013.disqus.com/count.js" async></script>
-    
 
-    
-      <script type="text/javascript">
-        var disqus_config = function () {
-          this.page.url = 'http://yoursite.com/2017/07/25/IE8兼容background-size/';
-          this.page.identifier = '2017/07/25/IE8兼容background-size/';
-          this.page.title = 'IE8兼容 background-size:cover';
-        };
-        var d = document, s = d.createElement('script');
-        s.src = 'https://aline2013.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', '' + +new Date());
-        (d.head || d.body).appendChild(s);
-      </script>
-    
+
+
+
+
+
 
   
 
@@ -776,10 +750,24 @@
 
 
 
-
-
-
-
+  
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="/js/src/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        av: AV, 
+        el: '#comments' ,
+        appId: 'wSCLoc1hRCvnibtSzk6dylH6-gzGzoHsz,',
+        appKey: 'IPX2QEVPTBhgHcgIcEwI84fk,',
+        placeholder: 'ヾﾉ≧∀≦)o来啊，快活啊!',
+    });
+  </script>
 
 
   

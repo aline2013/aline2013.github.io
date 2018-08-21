@@ -324,9 +324,9 @@
     <p class="lily-text">了解我对产品的点滴思考,请点击进入<a href="../categories/产品/">产品</a></p>
     <p class="lily-text">进入[我的标签]找找感兴趣的标签,请点击进入<a href="../tags/index.html">我的标签</a></p>
     <p class="lily-text" style="font-weight:bold;">和我的联系</p>
-    <p>人人都是产品经理主页：<a href="http://www.woshipm.com/u/654926" target="_blank" rel="external">hhttp://www.woshipm.com/u/654926</a></p>
-    <p>GitHub：<a href="https://github.com/aline2013" target="_blank" rel="external">https://github.com/aline2013</a></p>
-    <p>知乎：<a href="https://www.zhihu.com/people/lin-ling-77-58/activities" target="_blank" rel="external"> https://www.zhihu.com/people/lin-ling-77-58/activities</a></p>
+    <p>人人都是产品经理主页：<a href="http://www.woshipm.com/u/654926" target="_blank" rel="noopener">hhttp://www.woshipm.com/u/654926</a></p>
+    <p>GitHub：<a href="https://github.com/aline2013" target="_blank" rel="noopener">https://github.com/aline2013</a></p>
+    <p>知乎：<a href="https://www.zhihu.com/people/lin-ling-77-58/activities" target="_blank" rel="noopener"> https://www.zhihu.com/people/lin-ling-77-58/activities</a></p>
     <p>这是一个专注分享与交流的平台，有任何意见和建议欢迎留言，同时希望在这你能找到想要的内容，谢谢。</p>
   </div>
 </body>
@@ -342,13 +342,9 @@
           
   <div class="comments" id="comments">
     
-      <div id="disqus_thread">
-        <noscript>
-          Please enable JavaScript to view the
-          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-        </noscript>
-      </div>
-    
+    <div class="comments" id="comments">
+    </div>
+  
   </div>
 
 
@@ -593,23 +589,12 @@
 
   
 
-    
-      <script id="dsq-count-scr" src="https://aline2013.disqus.com/count.js" async></script>
-    
 
-    
-      <script type="text/javascript">
-        var disqus_config = function () {
-          this.page.url = 'http://yoursite.com/about/index.html';
-          this.page.identifier = 'about/index.html';
-          this.page.title = '';
-        };
-        var d = document, s = d.createElement('script');
-        s.src = 'https://aline2013.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', '' + +new Date());
-        (d.head || d.body).appendChild(s);
-      </script>
-    
+
+
+
+
+
 
   
 
@@ -617,10 +602,24 @@
 
 
 
-
-
-
-
+  
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="/js/src/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        av: AV, 
+        el: '#comments' ,
+        appId: 'wSCLoc1hRCvnibtSzk6dylH6-gzGzoHsz,',
+        appKey: 'IPX2QEVPTBhgHcgIcEwI84fk,',
+        placeholder: 'ヾﾉ≧∀≦)o来啊，快活啊!',
+    });
+  </script>
 
 
   
