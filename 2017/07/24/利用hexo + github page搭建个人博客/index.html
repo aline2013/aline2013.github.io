@@ -2,14 +2,27 @@
 
 
 
+
+
+
+
+
+
+
+
+
   
 
 
-<html class="theme-next mist use-motion" lang="zh-Hans">
+<html class="theme-next mist use-motion" lang="zh-CN">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222">
+
+
+
 
 
 
@@ -36,9 +49,6 @@
 
 
 
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
 
 
@@ -74,45 +84,25 @@
 
 <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=6.4.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="博客-初建," />
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.4.0">
 
 
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.4.0">
 
 
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.4.0">
 
 
-
-
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
-
-
-
+  <link rel="mask-icon" href="/images/logo.svg?v=6.4.0" color="#222">
 
 
 
-<meta name="description" content="简介 Hexo框架，是快速、简单且功能强大的 Node.js 博客框架，支持Makedown语法，有很多简约美观的主题可选，可以快速在几分钟内生成静态页面，同时可以结合Github Pages，将博客部署到Github Pages上。 相关网站： hexo: https://hexo.io/zh-cn/docs/index.html">
-<meta name="keywords" content="博客-初建">
-<meta property="og:type" content="article">
-<meta property="og:title" content="利用hexo + github 搭建个人博客">
-<meta property="og:url" content="http://yoursite.com/2017/07/24/利用hexo + github page搭建个人博客/index.html">
-<meta property="og:site_name" content="Lily&#39;s blog">
-<meta property="og:description" content="简介 Hexo框架，是快速、简单且功能强大的 Node.js 博客框架，支持Makedown语法，有很多简约美观的主题可选，可以快速在几分钟内生成静态页面，同时可以结合Github Pages，将博客部署到Github Pages上。 相关网站： hexo: https://hexo.io/zh-cn/docs/index.html">
-<meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/2017/07/24/利用hexo%20+%20github%20page搭建个人博客/1499585053208.png">
-<meta property="og:image" content="http://yoursite.com/2017/07/24/利用hexo%20+%20github%20page搭建个人博客/1499585714509.png">
-<meta property="og:image" content="http://yoursite.com/2017/07/24/利用hexo%20+%20github%20page搭建个人博客/1499588656088.png">
-<meta property="og:image" content="http://yoursite.com/2017/07/24/利用hexo%20+%20github%20page搭建个人博客/1499588713248.png">
-<meta property="og:image" content="http://yoursite.com/2017/07/24/利用hexo%20+%20github%20page搭建个人博客/1499588794336.png">
-<meta property="og:image" content="http://yoursite.com/2017/07/24/利用hexo%20+%20github%20page搭建个人博客/1499589189985.png">
-<meta property="og:image" content="http://yoursite.com/2017/07/24/利用hexo%20+%20github%20page搭建个人博客/1499589473026.png">
-<meta property="og:updated_time" content="2018-07-18T14:30:38.717Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="利用hexo + github 搭建个人博客">
-<meta name="twitter:description" content="简介 Hexo框架，是快速、简单且功能强大的 Node.js 博客框架，支持Makedown语法，有很多简约美观的主题可选，可以快速在几分钟内生成静态页面，同时可以结合Github Pages，将博客部署到Github Pages上。 相关网站： hexo: https://hexo.io/zh-cn/docs/index.html">
-<meta name="twitter:image" content="http://yoursite.com/2017/07/24/利用hexo%20+%20github%20page搭建个人博客/1499585053208.png">
+
+
+
 
 
 
@@ -121,13 +111,13 @@
   var CONFIG = {
     root: '/',
     scheme: 'Mist',
-    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
-    motion: true,
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
+    version: '6.4.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     algolia: {
       applicationID: 'B9NV4LPE1A',
       apiKey: '0d3753071de1f89be18c57b80a5b1db8',
@@ -139,12 +129,46 @@
 </script>
 
 
+  
+
+
+
+
+  <meta name="description" content="简介 Hexo框架，是快速、简单且功能强大的 Node.js 博客框架，支持Makedown语法，有很多简约美观的主题可选，可以快速在几分钟内生成静态页面，同时可以结合Github Pages，将博客部署到Github Pages上。 相关网站： hexo: https://hexo.io/zh-cn/docs/index.html">
+<meta name="keywords" content="博客-初建">
+<meta property="og:type" content="article">
+<meta property="og:title" content="利用hexo + github 搭建个人博客">
+<meta property="og:url" content="http://yoursite.com/2017/07/24/利用hexo + github page搭建个人博客/index.html">
+<meta property="og:site_name" content="Lily&#39;s blog">
+<meta property="og:description" content="简介 Hexo框架，是快速、简单且功能强大的 Node.js 博客框架，支持Makedown语法，有很多简约美观的主题可选，可以快速在几分钟内生成静态页面，同时可以结合Github Pages，将博客部署到Github Pages上。 相关网站： hexo: https://hexo.io/zh-cn/docs/index.html">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://yoursite.com/2017/07/24/利用hexo%20+%20github%20page搭建个人博客/1499585053208.png">
+<meta property="og:image" content="http://yoursite.com/2017/07/24/利用hexo%20+%20github%20page搭建个人博客/1499585714509.png">
+<meta property="og:image" content="http://yoursite.com/2017/07/24/利用hexo%20+%20github%20page搭建个人博客/1499588656088.png">
+<meta property="og:image" content="http://yoursite.com/2017/07/24/利用hexo%20+%20github%20page搭建个人博客/1499588713248.png">
+<meta property="og:image" content="http://yoursite.com/2017/07/24/利用hexo%20+%20github%20page搭建个人博客/1499588794336.png">
+<meta property="og:image" content="http://yoursite.com/2017/07/24/利用hexo%20+%20github%20page搭建个人博客/1499589189985.png">
+<meta property="og:image" content="http://yoursite.com/2017/07/24/利用hexo%20+%20github%20page搭建个人博客/1499589473026.png">
+<meta property="og:updated_time" content="2018-07-18T14:30:38.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="利用hexo + github 搭建个人博客">
+<meta name="twitter:description" content="简介 Hexo框架，是快速、简单且功能强大的 Node.js 博客框架，支持Makedown语法，有很多简约美观的主题可选，可以快速在几分钟内生成静态页面，同时可以结合Github Pages，将博客部署到Github Pages上。 相关网站： hexo: https://hexo.io/zh-cn/docs/index.html">
+<meta name="twitter:image" content="http://yoursite.com/2017/07/24/利用hexo%20+%20github%20page搭建个人博客/1499585053208.png">
+
+
+
+
+
 
   <link rel="canonical" href="http://yoursite.com/2017/07/24/利用hexo + github page搭建个人博客/"/>
 
 
 
-
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
 
   <title>利用hexo + github 搭建个人博客 | Lily's blog</title>
   
@@ -157,21 +181,43 @@
 
 
 
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
 
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
 
-
-
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
     
   
 
-  <div class="container sidebar-position-left page-post-detail ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -180,19 +226,21 @@
     
 
     <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
+      <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">Lily's blog</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
+    
       
         <p class="site-subtitle">摸索中的产品新人</p>
       
+    
   </div>
 
   <div class="site-nav-toggle">
-    <button>
+    <button aria-label="切换导航栏">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -200,65 +248,61 @@
   </div>
 </div>
 
-<nav class="site-nav">
-  
 
+
+<nav class="site-nav">
   
     <ul id="menu" class="menu">
       
         
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首页
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-categories">
-          <a href="/categories/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
-            
-            分类
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-about">
-          <a href="/about/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            关于
-          </a>
-        </li>
-      
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+  </li>
         
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
-          </a>
-        </li>
-      
+        
+          
+          <li class="menu-item menu-item-categories">
+    <a href="/categories/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+    <a href="/about/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
+  </li>
 
       
+      
     </ul>
+  
+
+  
+    
+
   
 
   
@@ -266,12 +310,20 @@
 
 
 
- </div>
+  
+
+
+
+</div>
     </header>
+
+    
+
 
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
+          
           <div id="content" class="content">
             
 
@@ -284,7 +336,13 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/24/利用hexo + github page搭建个人博客/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -302,12 +360,19 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">利用hexo + github 搭建个人博客</h1>
+          <h1 class="post-title" itemprop="name headline">利用hexo + github 搭建个人博客
+              
+            
+          </h1>
         
 
         <div class="post-meta">
-          
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -315,13 +380,30 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-24T20:59:27+08:00">
-                2017-07-24
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2017-07-24 20:59:27" itemprop="dateCreated datePublished" datetime="2017-07-24T20:59:27+08:00">2017-07-24</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-07-18 22:30:38" itemprop="dateModified" datetime="2018-07-18T22:30:38+08:00">2018-07-18</time>
+              
             
           </span>
 
@@ -337,11 +419,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/博客/" itemprop="url" rel="index">
-                    <span itemprop="name">博客</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/博客/" itemprop="url" rel="index"><span itemprop="name">博客</span></a></span>
 
                 
                 
@@ -350,6 +428,16 @@
           
 
           
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/07/24/利用hexo + github page搭建个人博客/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2017/07/24/利用hexo + github page搭建个人博客/" itemprop="commentCount"></span>
+                </a>
+              </span>
             
           
 
@@ -366,6 +454,9 @@
       </header>
     
 
+    
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
@@ -393,7 +484,7 @@
 <h4 id="部署博客到github-Page"><a href="#部署博客到github-Page" class="headerlink" title="部署博客到github Page"></a>部署博客到github Page</h4><p>用hexo deploy进行部署(也有其他方法，如git push)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">// 在站点目录下，安装hexo-deployer-git</span><br><span class="line">cd myblogs</span><br><span class="line">npm install hexo-deployer-git -save</span><br><span class="line"></span><br><span class="line">// 用编辑器打开目录下的配置文件，_config.yml</span><br><span class="line">// 最后一行：</span><br><span class="line">ploxy:</span><br><span class="line"></span><br><span class="line">// 添加内容后为</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https://github.com/aline2013/aline2013.github.io.git</span><br><span class="line">  branch: master</span><br><span class="line"></span><br><span class="line"> // 其中，repo:是这个库的git的远程地址，还有， 一定要注意键值对冒号之后要有一个空格，否则hexo部署不成功</span><br></pre></td></tr></table></figure></p>
 <img src="/2017/07/24/利用hexo%20+%20github%20page搭建个人博客/1499585714509.png">
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// 执行部署</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
-<p>部署成功后，可以在浏览器输入<a href="http://${yourname}.github.io，即可看到博客，以后重新部署静态页面只需要先执行hexo" target="_blank" rel="noopener">http://${yourname}.github.io，即可看到博客，以后重新部署静态页面只需要先执行hexo</a> g，然后hexo deploy即可。<br>但是，这时还不是自己的网站</p>
+<p>部署成功后，可以在浏览器输入http://${yourname}.github.io，即可看到博客，以后重新部署静态页面只需要先执行hexo g，然后hexo deploy即可。<br>但是，这时还不是自己的网站</p>
 <h3 id="购买域名并解析"><a href="#购买域名并解析" class="headerlink" title="购买域名并解析"></a>购买域名并解析</h3><h4 id="购买域名"><a href="#购买域名" class="headerlink" title="购买域名"></a>购买域名</h4><p>在阿里云购买域名，网站： <a href="https://wanwang.aliyun.com/?spm=5176.3047821.1.3.2a7aha" target="_blank" rel="noopener">https://wanwang.aliyun.com/?spm=5176.3047821.1.3.2a7aha</a><br>下载自己喜欢的域名，可以是me，比较普遍的是com;</p>
 <h4 id="解析"><a href="#解析" class="headerlink" title="解析"></a>解析</h4><p>登陆阿里云，进入控制台<br><img src="/2017/07/24/利用hexo%20+%20github%20page搭建个人博客/1499588656088.png"><br>左侧栏，点击域名，然后进入解析页面<br><img src="/2017/07/24/利用hexo%20+%20github%20page搭建个人博客/1499588713248.png"><br><img src="/2017/07/24/利用hexo%20+%20github%20page搭建个人博客/1499588794336.png"><br>点击页面页面上的   <strong>进入高级设置</strong><br><img src="/2017/07/24/利用hexo%20+%20github%20page搭建个人博客/1499589189985.png"><br>也可参考官方介绍：<br><a href="https://help.aliyun.com/knowledge_detail/39788.html" target="_blank" rel="noopener">https://help.aliyun.com/knowledge_detail/39788.html</a></p>
 <p>完成后，到myBlogs/public下，新建CHNAME文件,内容写上自己的域名<br><img src="/2017/07/24/利用hexo%20+%20github%20page搭建个人博客/1499589473026.png"><br>然后，更新上github，执行部署：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure></p>
@@ -405,26 +496,17 @@
       
     </div>
 
-    <div>
-      
-        
+    
 
-      
-    </div>
+    
+    
+    
 
-    <div>
-      
-        
+    
 
-      
-    </div>
+    
 
-    <div>
-      
-        
-
-      
-    </div>
+    
 
     <footer class="post-footer">
       
@@ -460,27 +542,24 @@
       
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
-
-    <div class="post-spread">
-      
-    </div>
   </div>
 
 
           </div>
           
 
-
-          
-  <div class="comments" id="comments">
-    
+  
     <div class="comments" id="comments">
     </div>
   
-  </div>
+
 
 
         </div>
@@ -503,104 +582,147 @@
 
       
         <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
             文章目录
           </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
             站点概览
           </li>
         </ul>
       
 
-      <section class="site-overview sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="/images/lily_avatar.jpeg"
-               alt="little lily" />
-          <p class="site-author-name" itemprop="name">little lily</p>
-           
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/lily_avatar.jpeg"
+                alt="little lily" />
+            
+              <p class="site-author-name" itemprop="name">little lily</p>
               <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
           
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">21</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">17</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/aline2013" target="_blank" title="GitHub"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="http://www.woshipm.com/u/654926" target="_blank" title="Woshipm"><i class="fa fa-fw fa-globe"></i>Woshipm</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://aline2013.com" target="_blank" title="Blogs"><i class="fa fa-fw fa-globe"></i>Blogs</a>
+                  
+                </span>
+              
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+            
+          
+          
+
         </div>
-        <nav class="site-state motion-element">
-
-          
-            <div class="site-state-item site-state-posts">
-              <a href="/archives/">
-                <span class="site-state-item-count">21</span>
-                <span class="site-state-item-name">日志</span>
-              </a>
-            </div>
-          
-
-          
-            
-            
-            <div class="site-state-item site-state-categories">
-              <a href="/categories/index.html">
-                <span class="site-state-item-count">5</span>
-                <span class="site-state-item-name">分类</span>
-              </a>
-            </div>
-          
-
-          
-            
-            
-            <div class="site-state-item site-state-tags">
-              <a href="/tags/index.html">
-                <span class="site-state-item-count">17</span>
-                <span class="site-state-item-name">标签</span>
-              </a>
-            </div>
-          
-
-        </nav>
-
-        
-
-        <div class="links-of-author motion-element">
-          
-            
-              <span class="links-of-author-item">
-                <a href="https://github.com/aline2013" target="_blank" title="GitHub">
-                  
-                    <i class="fa fa-fw fa-github"></i>
-                  
-                  GitHub
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="http://www.woshipm.com/u/654926" target="_blank" title="Woshipm">
-                  
-                    <i class="fa fa-fw fa-globe"></i>
-                  
-                  Woshipm
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="https://aline2013.com" target="_blank" title="Blogs">
-                  
-                    <i class="fa fa-fw fa-globe"></i>
-                  
-                  Blogs
-                </a>
-              </span>
-            
-          
-        </div>
-
-        
-        
-
-        
-        
-
-        
-
-
       </section>
 
       
@@ -633,30 +755,41 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright" >
-  
-  &copy;  2017 - 
-  <span itemprop="copyrightYear">2018</span>
-  <span class="with-love">
+        <div class="copyright">&copy; 2017 – <span itemprop="copyrightYear">2018</span>
+  <span class="with-love" id="animate">
     <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">little lily</span>
+
+  
+
+  
 </div>
 
 
-<div class="powered-by">
-  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
-</div>
 
-<div class="theme-info">
-  主题 -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Mist
-  </a>
-</div>
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.7.1</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a class="theme-link" target="_blank" href="https://theme-next.org">NexT.Mist</a> v6.4.0</div>
+
+
 
 
         
+
+
+
+
+
+
+
 
         
       </div>
@@ -669,6 +802,11 @@
       </div>
     
 
+    
+	
+    
+
+    
   </div>
 
   
@@ -687,7 +825,6 @@
 
 
 
-  
 
 
 
@@ -697,57 +834,6 @@
 
 
 
-
-
-
-  
-  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
-
-
-
-  
-  
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
-
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
-
-
-
-  
-
-
-  
 
 
 
@@ -757,29 +843,84 @@
 
 
   
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
 
 
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.4.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.4.0"></script>
 
 
 
   
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.4.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.4.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.4.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
   <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-  <script src="/js/src/Valine.min.js"></script>
+  
+  
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
   
   <script type="text/javascript">
     var GUEST = ['nick','mail','link'];
     var guest = 'nick,mail,link';
-    guest = guest.split(',').filter(item=>{
+    guest = guest.split(',').filter(function (item) {
       return GUEST.indexOf(item)>-1;
     });
     new Valine({
-        av: AV, 
         el: '#comments' ,
-        appId: 'wSCLoc1hRCvnibtSzk6dylH6-gzGzoHsz,',
-        appKey: 'IPX2QEVPTBhgHcgIcEwI84fk,',
-        placeholder: 'ヾﾉ≧∀≦)o来啊，快活啊!',
+        verify: false,
+        notify: false,
+        appId: 'wSCLoc1hRCvnibtSzk6dylH6-gzGzoHsz',
+        appKey: 'IPX2QEVPTBhgHcgIcEwI84fk',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        meta:guest,
+        pageSize:'10' || 10,
+        visitor: false
     });
   </script>
+
 
 
   
@@ -788,6 +929,15 @@
 
 
 
+  
+
+  
+
+  
+
+  
+
+  
   
 
   
