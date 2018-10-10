@@ -1847,7 +1847,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #26759c;
+  background: #09820d;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3148,10 +3148,14 @@ body {
 .posts-expand {
   padding-top: 10px;
 }
+.posts-expand .post-meta {
+  margin-bottom: 30px;
+}
 .posts-expand .post-eof {
   width: 20%;
   height: 2px;
   background: #50af50;
+  margin-bottom: 80px;
 }
 a:hover {
   color: #84ae43;
@@ -3172,6 +3176,10 @@ a:hover {
   .footer {
     color: #ffffe6;
   }
+}
+#头像,
+.my_own-avatar {
+  border-radius: 50%;
 }
 ._custom_share {
   margin-top: 30px;
