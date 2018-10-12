@@ -7,7 +7,7 @@
 
 现在我的博客文章在百度，谷歌都能搜索到，也添加了站内搜索，也有阅读数、阅读时间、分享功能，以及更多的动态效果，是我满意的一个版本，下面展示一下我的博客的站内搜索功能吧。
 
-![站内搜索](./search_inner.gif)
+![站内搜索](./all_preview.gif)
 
 我的博客改造之路：
 [hexo+github page助我搭建博客](http://www.aline2013.com/article/blog-new.html)
