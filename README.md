@@ -9,7 +9,7 @@
 
 ![站内搜索](./all_preview.gif)
 
-### 我的博客改造之路###
+### 我的博客改造之路
 [hexo+github page助我搭建博客](http://www.aline2013.com/article/blog-new.html)
 
 [配置博客主题next+评论系统disqus](http://www.aline2013.com/article/blog-inhance_theme&comment.html)
