@@ -1,20 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.aline2013.com/article/pm_demo.html</loc>
-    <lastmod>2019-03-17T19:12:57.897Z</lastmod>
+    <loc>https://www.aline2013.com/article/pm-demo.html</loc>
+    <lastmod>2019-03-17T19:34:27.059Z</lastmod>
+  </url>  <url>
+    <loc>https://www.aline2013.com/article/pm-%E9%92%89%E9%92%89%E6%B6%88%E6%81%AF%E6%A8%A1%E5%9D%97.html</loc>
+    <lastmod>2019-03-17T19:33:46.311Z</lastmod>
+  </url>  <url>
+    <loc>https://www.aline2013.com/article/%E9%A2%84%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97.html</loc>
+    <lastmod>2019-03-17T19:27:45.772Z</lastmod>
+  </url>  <url>
+    <loc>https://www.aline2013.com/article/blog-inhance_theme&comment.html</loc>
+    <lastmod>2019-03-17T19:27:26.270Z</lastmod>
   </url>  <url>
     <loc>https://www.aline2013.com/article/blog-inhance_deep.html</loc>
     <lastmod>2019-03-13T02:22:56.777Z</lastmod>
   </url>  <url>
-    <loc>https://www.aline2013.com/article/pm-%E9%92%89%E9%92%89%E6%B6%88%E6%81%AF%E6%A8%A1%E5%9D%97.html</loc>
-    <lastmod>2018-10-10T11:27:55.125Z</lastmod>
-  </url>  <url>
     <loc>https://www.aline2013.com/article/tool-%E5%BD%95%E5%88%B6%E7%9F%AD%E8%A7%86%E9%A2%91.html</loc>
     <lastmod>2018-09-28T12:18:03.307Z</lastmod>
-  </url>  <url>
-    <loc>https://www.aline2013.com/article/%E9%A2%84%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97.html</loc>
-    <lastmod>2018-09-28T03:07:54.047Z</lastmod>
   </url>  <url>
     <loc>https://www.aline2013.com/article/blog-new.html</loc>
     <lastmod>2018-09-27T12:41:35.034Z</lastmod>
@@ -48,9 +51,6 @@
   </url>  <url>
     <loc>https://www.aline2013.com/article/blog-update_hexo&next.html</loc>
     <lastmod>2018-09-27T11:30:10.859Z</lastmod>
-  </url>  <url>
-    <loc>https://www.aline2013.com/article/blog-inhance_theme&comment.html</loc>
-    <lastmod>2018-09-27T11:30:03.843Z</lastmod>
   </url>  <url>
     <loc>https://www.aline2013.com/article/blog-inhance_comment_valine.html</loc>
     <lastmod>2018-09-27T11:29:56.221Z</lastmod>
