@@ -143,9 +143,9 @@
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     algolia: {
-      applicationID: 'QNFQO1H6JE',
-      apiKey: '11438c823c9b9741d928a80bef36ab6e',
-      indexName: 'aline',
+      applicationID: 'TAHV9ZMPBJ',
+      apiKey: '4b1a2a4f36af706dee595ebb9bd840dd',
+      indexName: 'aline2013',
       hits: {"per_page":10},
       labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     }
@@ -177,7 +177,7 @@
 <meta property="og:image" content="https://www.aline2013.com/article/blog-inhance_deep/share_af.png">
 <meta property="og:image" content="https://www.aline2013.com/article/blog-inhance_deep/search_inner.gif">
 <meta property="og:image" content="https://www.aline2013.com/article/blog-inhance_deep/search.png">
-<meta property="og:updated_time" content="2018-10-12T07:44:49.601Z">
+<meta property="og:updated_time" content="2019-03-13T02:22:56.777Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="博客深度改造之踩坑记">
 <meta name="twitter:description" content="自从上个月被一位设计师朋友的博客网站惊艳到了，和我的网站放在一起，简直是现实版的高大上与矮挫穷的对比！哎，想想，虽然我没什么设计美感，但梦想还是要有的，毕竟模仿也是一条出路。但仔细一看，她用的是wordpress搭建的博客，而我是hexo+next搭建的。经过一番纠结后，我放弃了改用wordpress的想法，而是走上了博客升级和改造之路。">
@@ -465,7 +465,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-10-12 15:44:49" itemprop="dateModified" datetime="2018-10-12T15:44:49+08:00">2018-10-12</time>
+                <time title="修改时间：2019-03-13 10:22:56" itemprop="dateModified" datetime="2019-03-13T10:22:56+08:00">2019-03-13</time>
               
             
           </span>
@@ -604,8 +604,8 @@
 <h4 id="4、分享功能"><a href="#4、分享功能" class="headerlink" title="4、分享功能"></a>4、分享功能</h4><p>参考链接：<a href="https://www.jianshu.com/p/a7859fefc7f9" target="_blank" rel="noopener">[Next]集成Mob分享组件</a><br>效果图：<br><img src="/article/blog-inhance_deep/share_bf.png"></p>
 <p>经过我自定义css，我的网站的效果图：<br><img src="/article/blog-inhance_deep/share_af.png"></p>
 <h3 id="三、整体优化"><a href="#三、整体优化" class="headerlink" title="三、整体优化"></a>三、整体优化</h3><h4 id="1、站内搜索-有小问题说明"><a href="#1、站内搜索-有小问题说明" class="headerlink" title="1、站内搜索(有小问题说明)"></a>1、站内搜索(有小问题说明)</h4><p>站内搜索采用的是Algolia搜索插件。先看效果图：<br><img src="/article/blog-inhance_deep/search_inner.gif"></p>
-<p>首先需要申请Algolia的账号。具体操作简单，参考<a href="https://zouzeir.xyz/2017/01/16/Hexo%E9%9B%86%E6%88%90Algolia%E6%90%9C%E7%B4%A2%E6%8F%92%E4%BB%B6/" target="_blank" rel="noopener">Hexo集成Algolia搜索插件</a>。<br><strong>但</strong>我搭建完后，报错<code>theme-next-algolia-instant-search</code>没找到，要记得安装这个插件,到<code>Blog/theme/next/</code>下，执行下面命令，即可。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git clone https://github.com/theme-next/theme-next-algolia-instant-search source/lib/algolia-instant-search</span><br></pre></td></tr></table></figure></p>
-<p>详细步骤看<a href="https://github.com/theme-next/theme-next-algolia-instant-search" target="_blank" rel="noopener">官方说明</a></p>
+<p>首先需要到<a href="https://www.algolia.com" target="_blank" rel="noopener">官网</a>申请Algolia的账号。具体操作简单，参考<a href="http://www.qingpingshan.com/m/view.php?aid=386198" target="_blank" rel="noopener">Hexo+Next集成Algolia搜索</a>。<br><strong>但</strong>我搭建完后，报错<code>theme-next-algolia-instant-search</code>没找到，要记得安装这个插件,到<code>Blog/theme/next/</code>下，执行下面命令，即可。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git clone https://github.com/theme-next/theme-next-algolia-instant-search source/lib/algolia-instant-search</span><br></pre></td></tr></table></figure></p>
+<p>安装插件的详细步骤看<a href="https://github.com/theme-next/theme-next-algolia-instant-search" target="_blank" rel="noopener">官方说明</a></p>
 <h4 id="2、搜索优化-有小问题说明"><a href="#2、搜索优化-有小问题说明" class="headerlink" title="2、搜索优化(有小问题说明)"></a>2、搜索优化(有小问题说明)</h4><p>照常，先抛出参考链接：<a href="http://www.ehcoo.com/seo.html" target="_blank" rel="noopener">Hexo-next百度和谷歌搜索优化</a></p>
 <p>谷歌搜索的效果图如下：<br><img src="/article/blog-inhance_deep/search.png"></p>
 <p><strong>但</strong>由于我的网站原本是<code>http://aline2013.com</code>，申请百度收录时，网站地址一定要加<code>www</code>,<br>导致网站验证这一步，我的提示一直是301，无法通过。这是因为我在域名解析中，把所有的<code>*.aline2013.com</code>都跳转到顶级域名<code>aline2013.com了</code>。所以会报301重定向。解决方法很简单，<br>在主题目录下的_comfig.yml中，修改url字段，如下是我的改法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># URL</span><br><span class="line">hild&apos; and root as &apos;/child/&apos;</span><br><span class="line">url: http://www.aline2013.com</span><br></pre></td></tr></table></figure></p>
@@ -692,6 +692,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/article/pm_demo.html" rel="prev" title="个人作品demo展示">
+                个人作品demo展示 <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -769,7 +773,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">25</span>
+                    <span class="site-state-item-count">26</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -837,7 +841,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">16</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">18</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -907,7 +915,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2017 – <span itemprop="copyrightYear">2018</span>
+        <div class="copyright">&copy; 2017 – <span itemprop="copyrightYear">2019</span>
   <span class="with-love" id="animate">
     <i class="fa fa-heart"></i>
   </span>
